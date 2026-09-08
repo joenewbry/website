@@ -1,0 +1,25 @@
+[Unit]
+Description=Owner blog drafts and publishing
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=blog-editor
+Group=blog-editor
+WorkingDirectory=/ssd/blog-editor/current
+ExecStart=/ssd/blog-editor/venv/bin/uvicorn app:app --host 127.0.0.1 --port 8137 --no-access-log
+Environment=BLOG_DATA=/ssd/blog-editor/data
+Environment=BLOG_CONFIG=/etc/blog-editor/config.json
+Environment=BLOG_REPO=/ssd/blog-editor/website
+Environment=PYTHONDONTWRITEBYTECODE=1
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/ssd/blog-editor/data /ssd/blog-editor/website
+MemoryMax=512M
+TasksMax=64
+[Install]
+WantedBy=multi-user.target
