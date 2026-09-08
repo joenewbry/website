@@ -1,3 +1,4 @@
+(() => {
 'use strict';
 const API='https://ai.digitalsurfacelabs.com/blog-editor/api';
 const $=s=>document.querySelector(s);
@@ -27,3 +28,5 @@ $('#cancelPublish').onclick=()=>$('#publishDialog').close();
 $('#confirmPublish').onclick=async()=>{lock(true);say('Publishing…');try{const d=await api('/drafts/'+current.slug+'/publish',{method:'POST',body:JSON.stringify({version:current.version,confirm:true})});$('#publishDialog').close();showDraft(d);say('Sent to your website. GitHub Pages may take a few minutes to update.');}catch(e){$('#publishDialog').close();say(e.message,true);}finally{lock(false);}};
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='s'&&!$('#writing').hidden){e.preventDefault();saveDraft();}});
+
+})();
