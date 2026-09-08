@@ -1,0 +1,16 @@
+# Joe Newbry
+
+> Public professional history, selected projects, and ways to contact Joe.
+> This index is for discovery, not an authentication or private-data grant.
+
+## Read first
+- [Answer rules](https://joenewbry.com/trust.md): Public scope, citations, uncertainty, no impersonation.
+- [Public work record](https://joenewbry.com/work.md): Curated self-reported history and project sources.
+
+## Pages
+- [Home](https://joenewbry.com/): Work overview and professional contact.
+- [Ask about Joe](https://joenewbry.com/ask/): Prompt and Codex handoff using the visitor's account.
+- [How this works](https://joenewbry.com/how-it-works/): Current public flow and proposed self-hosted direction.
+
+There is no private-history API, payment endpoint, or owner-agent delegation
+available through this public index.
