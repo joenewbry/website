@@ -1,0 +1,11 @@
+# GitHub Pages builds with Jekyll; do not add .nojekyll.
+# Keep development artifacts and the obsolete contact-bearing resume out of Pages.
+exclude:
+  - scripts
+  - design-reviews
+  - _review
+  - README.md
+  - tasks.md
+  - hosting-options.md
+  - claude-audit.md
+  - "Joe_Newbry's_Resume_AI (2025).txt"

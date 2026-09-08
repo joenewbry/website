@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How this works — Joe Newbry</title>
+<meta name="description" content="Humans control the data; agents manage access. How public Codex Q&A works today, and a proposed protocol for self-hosted private history.">
+<link rel="canonical" href="https://joenewbry.com/how-it-works/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How this works — Joe Newbry">
+<meta property="og:description" content="Humans control the data; agents manage access. How public Codex Q&A works today, and a proposed protocol for self-hosted private history.">
+<meta property="og:url" content="https://joenewbry.com/how-it-works/">
+<meta property="og:image" content="https://joenewbry.com/headshot.png">
+<meta property="og:image:alt" content="Joe Newbry">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/headshot.png">
+<link rel="stylesheet" href="/style.css?v=20260908">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header wrap">
+<a class="brand" href="/">Joe Newbry<span class="brand-dot" aria-hidden="true">.</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="/#work">Work</a>
+<a href="/ask/">Ask about me</a>
+<a href="/how-it-works/">How this works</a>
+<a class="button small" href="/#contact">Get in touch ↗</a>
+</nav>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="subhero">
+<a class="back" href="/ask/">← Ask about my work</a>
+<h1>Humans control the data.<br>Agents manage access.</h1>
+<p class="intro">I want a useful memory of my work—and a way to answer someone’s question without handing over the whole archive. This site is a first step toward that.</p>
+</div>
+<div class="prose">
+<h2>Start with what I’ve chosen to publish.</h2>
+<p>A portfolio gives everyone the same summary. A conversation lets you follow the thread that matters to you: a technical decision, a project, or a possible role.</p>
+</div>
+<figure class="diagram" aria-label="Comparison of a traditional portfolio and this site’s public Codex question flow">
+<h3>A traditional portfolio</h3>
+<div class="diagram-row">
+<div class="node">
+<strong>I write one summary</strong>
+<small>A résumé and project list</small>
+</div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="node">
+<strong>You read and interpret</strong>
+<small>The same page for every visitor</small>
+</div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="node">
+<strong>You email follow-ups</strong>
+<small>We fill in the missing context</small>
+</div>
+</div>
+<h3>The public Q&amp;A on this site</h3>
+<div class="diagram-row">
+<div class="node green">
+<strong>You bring a question</strong>
+<small>Your Codex account · your usage</small>
+</div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="node green">
+<strong>Codex reads my public record</strong>
+<small>work.md + trust.md answer rules</small>
+</div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="node green">
+<strong>You explore a sourced answer</strong>
+<small>Follow up, check the evidence, contact me</small>
+</div>
+</div>
+</figure>
+<div class="prose">
+<h2>What does trust.md do?</h2>
+<p>It makes my answer rules readable: use the public record, cite sources, admit what is missing, and don’t speak as me. You can inspect the exact instructions before starting.</p>
+<p>A text file is guidance, not an access-control system. The boundary in this version is simple: these files are already public, and the site connects to no private archive. An AI can still make mistakes.</p>
+<div class="actions">
+<a class="button secondary small" href="/trust.md">Read my rules ↗</a>
+<a class="button secondary small" href="/work.md">Read what I share ↗</a>
+<a class="button secondary small" href="/llms.txt">Agent index ↗</a>
+</div>
+<h2>Who runs the model? Who pays?</h2>
+<p>You run Codex in your own account. Your plan limits or API billing apply; I don’t collect payment. The link fills in a prompt, and you decide whether to send it. This site does not receive your conversation. Your AI provider processes what you submit under your account’s policies; the website host may log page requests.</p>
+<p class="meta">See OpenAI’s documentation for <a href="https://learn.chatgpt.com/docs/reference/commands#deep-links">prompt links</a> and <a href="https://developers.openai.com/codex/auth/">Codex authentication and billing</a>.</p>
+<h2>The deeper version I want to build.</h2>
+<p>My screen history could be a lookback: a record of what I worked on, what changed, and how I got there. I want to keep that history under my control, while letting an agent answer narrowly scoped questions from it.</p>
+<p>That needs a different architecture. The following is a proposed self-hosted extension, not a service you can use on this site yet.</p>
+</div>
+<figure class="diagram" aria-label="Proposed private-history protocol, not yet available">
+<h3>Proposed · A scoped answer from an owner’s private history</h3>
+<div class="diagram-row">
+<div class="node">
+<strong>A visitor requests an answer</strong>
+<small>Question, purpose, identity, and spending limit</small>
+</div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="node green">
+<strong>My server checks the rules</strong>
+<small>Allow, deny, narrow the request, or ask me</small>
+</div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="node">
+<strong>A bounded answer is released</strong>
+<small>Permitted evidence only · access receipt</small>
+</div>
+</div>
+<small>The private archive stays behind the owner’s access controls. A paid cloud model may still receive permitted excerpts: the owner must choose whether that is allowed.</small>
+</figure>
+<div class="prose">
+<ul class="rule-list">
+<li>
+<strong>Human ownership.</strong> I choose the sources, policies, model providers, and when to revoke future access.</li>
+<li>
+<strong>Agent-managed decisions.</strong> An agent interprets the request; the server enforces the scope and checks what leaves.</li>
+<li>
+<strong>Pay for computation, not permission.</strong> A quote and hard spending limit come before a paid run. Payment never expands the data you can see.</li>
+<li>
+<strong>Inspectable history.</strong> I can review what was asked, what was allowed, and what was released. Private access should leave a receipt.</li>
+</ul>
+<h2>Why open source?</h2>
+<p>I want this to be something other people can run, not just a feature of my website. A useful starting point would be one self-hosted service, a sample archive, an editable trust.md, and a small protocol any agent can speak.</p>
+<p>I’m exploring this through <a href="https://github.com/joenewbry/inspectable-trust">Inspectable Trust</a>. The next milestone is a repeatable example: ask an owner about a past project, get an answer with permitted evidence, then revoke access and prove the next request is denied.</p>
+<div class="actions">
+<a class="button accent" href="/ask/">Try the public version ↗</a>
+<a class="button secondary" href="mailto:joenewbry@gmail.com?subject=Building%20owner-controlled%20agent%20access">Help build the next version ↗</a>
+</div>
+</div>
+</div>
+</main>
+<footer class="wrap">
+<span>Joe Newbry · Software, surfing, and startups.</span>
+<div>
+<a href="https://github.com/joenewbry">GitHub ↗</a>
+<a href="https://x.com/joenewbry">X ↗</a>
+<a href="/trust.md">trust.md</a>
+</div>
+</footer>
+</body>
+</html>
