@@ -1,0 +1,23 @@
+---
+layout: blog
+title: Blog
+---
+<h1>Current blog</h1>
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d %b, %Y' }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>New posts will appear here. Earlier writing is below.</p>
+{% endif %}
+<section class="archive" aria-labelledby="archive-heading">
+  <h2 id="archive-heading">Old blog <span>(Bear Blog)</span></h2>
+  <ul class="post-list">
+    {% for post in site.data.bear_archive %}
+    <li><time datetime="{{ post.date | escape }}">{{ post.display_date | escape }}</time><a href="{{ post.url | escape }}">{{ post.title | escape }}</a></li>
+    {% endfor %}
+  </ul>
+  <p><a href="https://newbry.bearblog.dev/blog/">Visit the old blog →</a></p>
+</section>
