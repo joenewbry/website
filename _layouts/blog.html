@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} — Joe Newbry</title>
+  <meta name="description" content="{{ page.description | default: 'Notes on software, surfing, and startups by Joe Newbry.' | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="Joe Newbry’s blog" href="/blog/feed.xml">
+  <link rel="stylesheet" href="/blog/blog.css">
+</head>
+<body>
+  <header>
+    <a class="title" href="/blog/">Software, Surfing, and Startups</a>
+    <nav aria-label="Blog navigation">
+      <a href="/">Home</a>
+      <a href="/blog/">Current blog</a>
+      <a href="https://newbry.bearblog.dev/blog/">Old blog (Bear Blog)</a>
+    </nav>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer><a href="/blog/feed.xml">RSS</a> · Written by <a href="/">Joe Newbry</a></footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+---
+layout: blog
+---
+<article>
+  <h1>{{ page.title | escape }}</h1>
+  <p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if page.draft %} · Draft preview{% endif %}</p>
+  {{ content }}
+</article>
+<p class="back"><a href="/blog/">← All posts</a></p>

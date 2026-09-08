@@ -1,6 +1,25 @@
-# Keep development notes and the obsolete resume out of the public artifact.
+title: Joe Newbry
+url: https://joenewbry.com
+baseurl: ""
+timezone: America/Los_Angeles
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+future: false
+show_drafts: false
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 exclude:
   - "Joe_Newbry's_Resume_AI (2025).txt"
   - tasks.md
   - hosting-options.md
   - claude-audit.md
+  - README.md
+  - scripts
+  - design-reviews
+  - Gemfile
+  - Gemfile.lock
+  - vendor
