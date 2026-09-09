@@ -1,58 +1,62 @@
-﻿Joe Newbry     
-290 Jefferson Avenue, Brooklyn, NY 11216 
-joenewbry@gmail.com • (541)-760-1871 
+Joe Newbry
+AI / Full-Stack Engineer • React, TypeScript, Node.js, LLM applications
+joenewbry@gmail.com | https://joenewbry.com | https://digitalsurfacelabs.com
 ——————————————————————————————————————————————————————
-WORK EXPERIENCE 
-Walmart, New York, NY           March 2024 - Present
-Senior iOS Engineer
-● Developed a barcode scanner for Walmart’s internal employee app, used across all stores, improving scanning accuracy by 40% and reducing operational costs by ~$1.2M/year
-● Managed distribution using Cocoapods, Podfiles, and Swift Package Manager
+WORK EXPERIENCE
+Digital Surface Labs	June 2026 – Present
+Founder & AI / Full-Stack Engineer
+• Build and operate AI products from idea through deployment, owning product scope, web interfaces, APIs, data integration, and reliability.
+• Built Digital Surface, a personal AI workspace that connects email, documents, and screen/audio history to searchable context and tool-using LLM workflows.
+• Built Claims Genie with React, TypeScript, Tailwind CSS, and Node.js: receipt and document intake, AI-assisted matching, user review, and tracked application workflows.
+• Implemented streaming chat, OAuth integrations, retrieval, and human approval boundaries; developed native Swift/SwiftUI clients alongside the web platform.
+• Use Claude and Codex to turn specifications into reviewed changes, with isolated worktrees, automated checks, browser testing, and documented releases.
+
+Walmart, New York, NY   	March 2024 – May 2026
+Senior Engineer
+● Developed a React Native barcode scanner SDK for use in Walmart’s internal employee app
+● Used across all stores, improving scanning accuracy by 40% and reducing operational costs by ~$1.2M/year
+● Managed distribution using Cocoapods, Podfiles, Swift Package Manager, and NPM
 ● Designed and implemented features including adding front camera support and digital zoom
-● Enhanced release processes by integrating SonarQube into our CI/CD pipeline to report code coverage
+● Enhanced release process by integrating SonarQube into our CI/CD pipeline to report code coverage
 ● Created a staging build pipeline to release an internal testing app through Testflight using Fastlane and Looper
 
-
-Grindr, New York, NY           November 2023 - February 2024
-Senior iOS Engineer
-● Launch new feature in Grindr’s iOS app in 6 weeks (RxSwift, Coordinator pattern, MVVC)
-● Collaborate with design and product to convert Figma designs into scoped Jira tickets
+Grindr, New York, NY   	November 2023 - February 2024
+Senior Engineer
+● Launched a new feature in Grindr’s iOS app in 6 weeks (RxSwift, Coordinator pattern, MVVM)
+● Collaborated with design and product to convert Figma designs into scoped Jira tickets
 ● Data persistence with WebSockets and Rest API along with Core Data
 ● Integrated Amplitude to incrementally release features
 ● Unit-tested RxSwift inputs and outputs using XCTestCase
 
-
-Screen Timelapse, New York, NY           April 2023 - October 2023
-Senior A.I. Engineer
-● Architected end-to-end screen history solution that integrated with Claude using ChromaDB’s MCP framework
+Screen Timelapse, New York, NY   	April 2023 - October 2023
+Senior Engineer
+● Built a searchable screen-history system with automated capture, OCR, metadata storage, and a debugging dashboard
 ● Implemented automated screenshot capture every 60 seconds, text extraction via Tesseract.js OCR, and JSON storage of metadata
+● Built a debugging dashboard in Vue.js and TypeScript to allow for visualization of processed data and performance metrics
 ● Released feature improvements based on feedback including toggleable modes, pause/resume functionality via keyboard input, and batch processing of vector storage
 
-
-Sunny A.I., New York, NY                                                                                      October 2022 - March 2023
-Senior A.I. Engineer
-● Designed architecture of LLM-based state machine with tool use that loaded JSON therapy sessions, and pulled in relevant client information throughout the conversation using RAG and named variables
+Sunny A.I., New York, NY 				 			          	          October 2022 - March 2023
+Senior Engineer
+● Created React Native mobile app client with WebSocket-based chat interface
+● Designed a conversational state machine with tool use that loaded JSON therapy sessions, and pulled in relevant client information throughout the conversation using RAG and named variables
+● Evaluated conversational model quality, response time, and cost to guide the application architecture
 ● Configured multitask architecture to run safety checks in the background without interrupting the conversation
-● Shipped multiple tenant support using Redis to decrease memory pressure on hosted Node server
-● Evaluated vector storage solutions including Pinecone, ChromaDB, and others before selecting Pinecone for scalability and production readiness 
+● Shipped multiple tenant support using Redis to decrease memory pressure on hosted Node.js server
+● Evaluated vector storage solutions including Pinecone, ChromaDB, and others before selecting Pinecone for scalability and production readiness
 
-
-Cadmium, New York, NY                                                                                    June 2019 - December 2019        
+Cadmium, New York, NY							          	          June 2019 - December 2019
 Founder
 ● Managed a three-person team that built A.I.-powered drawing tools for hand-drawn animation
 ● Implemented segment similarity search in Python and OpenCV
 
-
-Microsoft, San Francisco, CA                                                                    December 2015 - December 2017
-Software Engineer 
+Microsoft, San Francisco, CA 					 			  December 2015 - December 2017
+Software Engineer
 ● Led research effort to build an image classifier model on iOS devices using TensorFlow Lite for on-device receipt detection
-● Launched SpendIQ — a Swift (and SwiftUI) project that used on device receipt detection
+● Launched SpendIQ — a Swift project that used on device receipt detection
 ● Evaluated RxSwift for use in SpendIQ
-    ● Worked on MileIQ — a mixed language Swift / Objective-C project that uses a state machine to process GPS data
+    ● Worked on MileIQ — a mixed language Swift / Objective-C project that uses a state machine to process GPS data
 ● Built our drive auto-classification feature using an operation queue to safely animate UITableView updates
 
-
-
-
-EDUCATION 
-Claremont McKenna College, Claremont, CA                                                                             May 2014
-Bachelor of Arts in Economics (sequence in Computer Science)
+EDUCATION
+Claremont McKenna College, Claremont, CA 								            May 2014
+Bachelor of Arts in Economics, sequence in Computer Science
