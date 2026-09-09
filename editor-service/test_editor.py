@@ -51,3 +51,47 @@ def test_explicit_publish_and_private_later_edits(client,monkeypatch):
     assert r.json()['status']=='published'
     r=draft(client,1,'Private change')
     assert r.json()['has_unpublished_changes'] and r.json()['published_version']==1
+
+
+def test_publication_waits_for_exact_revision(client,monkeypatch):
+    from urllib.error import HTTPError,URLError
+    draft(client)
+    endpoint='/api/drafts/test-post/publication'
+    assert client.get(endpoint).status_code==401
+    assert client.get(endpoint,headers=headers()).json()=={'state':'draft'}
+    d=app.read('test-post')|{'published_date':'2026-09-08','published_revision':'new-revision','status':'published'}
+    app.save(d)
+    def missing(*a,**k):raise HTTPError('https://joenewbry.com',404,'Not found',{},None)
+    monkeypatch.setattr(app,'urlopen',missing)
+    assert client.get(endpoint,headers=headers()).json()=={'state':'building'}
+    class Response:
+        status=200
+        def __init__(self,body):self.body=body
+        def __enter__(self):return self
+        def __exit__(self,*args):pass
+        def read(self,limit):return self.body.encode()
+    monkeypatch.setattr(app,'urlopen',lambda *a,**k:Response('<article>Old published version</article><meta name="blog-editor-revision" content="old-revision">'))
+    assert client.get(endpoint,headers=headers()).json()=={'state':'building'}
+    monkeypatch.setattr(app,'urlopen',lambda *a,**k:Response('<article>New version</article><meta name="blog-editor-revision" content="new-revision">'))
+    r=client.get(endpoint,headers=headers()).json()
+    assert r=={'state':'live','url':'https://joenewbry.com/blog/2026/09/08/test-post/?v=new-revision'}
+    def offline(*a,**k):raise URLError('temporarily unavailable')
+    monkeypatch.setattr(app,'urlopen',offline)
+    assert client.get(endpoint,headers=headers()).json()=={'state':'building'}
+
+
+def test_publisher_writes_verifiable_permalink(tmp_path,monkeypatch):
+    monkeypatch.setattr(app,'REPO',tmp_path)
+    calls=[]
+    def fake_git(*args):
+        calls.append(args)
+        return 'commit-id' if args==('rev-parse','HEAD') else ('changed' if args==('diff','--cached','--name-only') else '')
+    monkeypatch.setattr(app,'git',fake_git)
+    d={'slug':'a-stable-slug','title':'A title changed by the author','body':'Actual article','published_date':'2026-09-08'}
+    result=app.publish_to_github(d)
+    post=(tmp_path/'_posts/2026-09-08-a-stable-slug.md').read_text()
+    assert 'permalink: /blog/2026/09/08/a-stable-slug/' in post
+    assert 'editor_revision: '+result['published_revision'] in post
+    assert ('push','origin','HEAD:main') in calls
+    changed=app.publish_to_github(d|{'body':'Revised article'})
+    assert changed['published_revision']!=result['published_revision']
