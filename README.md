@@ -86,3 +86,5 @@ and the systemd unit are included. Deploy a dated release under
 only `blog-editor.service`. The scratchpad nginx runbook remains in
 `/Users/joe/dev/information-projects/hosting/ai-scratchpad/README.md`.
 Local service tests: `pytest -q editor-service/test_editor.py`.
+
+Publication links remain hidden until the public page returns 200 with the exact published revision marker. The editor checks for up to five minutes, then offers Check publication. Revision query strings bypass cached 404 responses and old post versions. Older posts without a marker are checked for a successful article page. Tests cover a 404 during deployment, stale content during republishing, completion, and temporary network failure.

@@ -1,5 +1,7 @@
 """Owner-only draft storage and explicit publication to Joe's existing GitHub Pages blog."""
-import base64, hmac, json, os, re, subprocess, threading, uuid
+import base64, hashlib, hmac, json, os, re, subprocess, threading, time, uuid
+from urllib.request import Request as URLRequest, urlopen
+from urllib.error import HTTPError, URLError
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -140,13 +142,15 @@ def publish_to_github(d):
     full=REPO/path;full.parent.mkdir(exist_ok=True)
     # Liquid is not needed in user Markdown; reject it rather than invoking Jekyll template code.
     if '{%' in d['body'] or '{{' in d['body']:raise ValueError('Remove Liquid template tags before publishing.')
-    body='---\ntitle: '+json.dumps(d['title'],ensure_ascii=False)+'\nlayout: post\n---\n\n'+d['body']+'\n'
+    revision=hashlib.sha256((d['title']+'\0'+d['body']).encode()).hexdigest()
+    route='/blog/'+day.replace('-','/')+'/'+d['slug']+'/'
+    body='---\ntitle: '+json.dumps(d['title'],ensure_ascii=False)+'\nlayout: post\npermalink: '+route+'\neditor_revision: '+revision+'\n---\n\n'+d['body']+'\n'
     full.write_text(body)
     git('add','--',str(path))
     if git('diff','--cached','--name-only'):
         git('-c','user.name=Joe Newbry','-c','user.email=joenewbry@users.noreply.github.com','commit','-m','Publish blog post: '+d['slug'])
         git('push','origin','HEAD:main')
-    return {'published_date':day,'published_url':'https://joenewbry.com/blog/'+day.replace('-','/')+'/'+d['slug']+'/','commit':git('rev-parse','HEAD')}
+    return {'published_date':day,'published_url':'https://joenewbry.com'+route,'published_revision':revision,'commit':git('rev-parse','HEAD')}
 
 
 @app.post('/api/drafts/{slug}/publish')
@@ -161,3 +165,24 @@ def publish(slug:str,incoming:Publish):
         d=d|publication|{'status':'published','published_version':d['version'],'has_unpublished_changes':False,'updated':now()}
         save(d)
         return d
+
+
+@app.get('/api/drafts/{slug}/publication')
+def publication(slug:str):
+    d=read(slug)
+    if not d.get('published_date'):return {'state':'draft'}
+    day=d['published_date']
+    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',day):raise HTTPException(400,'Invalid publication date.')
+    # Only check our own generated URL; never follow a draft-supplied hostname.
+    url='https://joenewbry.com/blog/'+day.replace('-','/')+'/'+valid(slug)+'/'
+    revision=d.get('published_revision')
+    try:
+        request=URLRequest(url+'?editor_check='+str(int(time.time())),headers={'User-Agent':'JoeBlogEditor/1.0','Cache-Control':'no-cache'})
+        with urlopen(request,timeout=8) as response:
+            body=response.read(2_000_000).decode('utf-8',errors='replace')
+            ready=response.status==200 and '<article>' in body
+            if revision:ready=ready and ('name="blog-editor-revision" content="'+revision+'"') in body
+    except (HTTPError,URLError,TimeoutError,OSError):return {'state':'building'}
+    if not ready:return {'state':'building'}
+    # A revision query avoids a browser's cached 404 or old copy after republishing.
+    return {'state':'live','url':url+'?v='+(revision or d.get('commit','published'))}
