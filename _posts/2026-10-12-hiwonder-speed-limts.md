@@ -6,7 +6,7 @@ permalink: /blog/hiwonder-speed-limts/
 
 I want my HiWonder arm to move between adjacent chessboard squares in 0.5 seconds, then make 30 complete F1–G1–F1 roundtrips in at most 65 seconds. The squares are 20 mm wide, and the pointer is commanded to hover 20 mm above the board.
 
-The latest experiment completed all 30 roundtrips with passing modeled arrival checks, but took **67.56 seconds**. The half-second leg target and 65-second run target remain open. The useful finding so far is that command scheduling, status polling and recording overhead account for a substantial part of the delay.
+The latest experiment completed all 30 roundtrips with passing modeled arrival checks, but took **67.56 seconds**. Those original time targets were not achieved. I have accepted this timing for the next task: collecting motion across all 64 squares. The useful finding so far is that command scheduling, status polling and recording overhead account for a substantial part of the delay.
 
 ## The specification gives an optimistic scale
 
@@ -94,8 +94,18 @@ That is a sensitivity calculation, not a confidence interval. Host receipt timin
 
 [Download all 60 latest sustained observations](/assets/hiwonder-speed-tests/castor-sustained-0375s-30cycles-summary.json), [the previous 400 ms checkpoint run](/assets/hiwonder-speed-tests/castor-sustained-04s-30cycles-v2-summary.json), [the retained 93.87-second run](/assets/hiwonder-speed-tests/castor-sustained-04s-30cycles-summary.json), [angular motion estimates](/assets/hiwonder-speed-tests/castor-angular-motion-estimates.json), and [row-1 results](/assets/hiwonder-speed-tests/castor-row1-1s-summary.json). Raw recordings, native receipts and failed attempts have verified off-host copies. The separate experiment repository is `hiwonder-speed-tests`.
 
-## The next experiments
+## Motion data across all 64 squares
 
-The practical speed limit remains unbracketed. The next work is to reduce logging and recording contention, improve feedback timing, and compare shorter bounded execution through the same owner. The declared D1–D2, D2–D3 and D1–D3 matrix, including braking at D2 in consecutive moves, still needs its physical trials.
+The controller now reaches every square. The farther rows need shoulder and elbow changes; row 1's two-axis method alone cannot cover the board. The geometric planner prefers held posture where it fits, then solves additional joints when needed. Directional command compensation accounts for observed deadband, and endpoint checks still use raw measured joints.
 
-I will keep the 0.5-second per-leg requirement and rerun a fresh 30-cycle panel after the controller and measurement method qualify. A deterministic controller with measured feedback is the starting point. A neural network would need to demonstrate a repeatable improvement over that baseline.
+There are now **103 recorded visits meeting the model and saved-frame checks across all 64 squares**, with one to three visits per square. Each data visit has a freshly persisted wrist frame, its hash and a causally aligned native joint sample. The intended dataset is ten visits per square; that collection remains incomplete. These labels use the servo-derived model, not independently measured physical square centers or height.
+
+![Recorded visits by square; target ten per square](/assets/hiwonder-speed-tests/board-coverage.png)
+
+The repeated collector uses a closed adjacent-square circuit and alternates direction. It retains unsuccessful primary moves and permits one bounded correction after a known completed command. Faults, unknown writes, failed corrections and recording errors stop the batch. Neither USB nor camera ownership changes.
+
+The first repeated circuit stopped before dispatching A6. Its packet-rate bound covered measured joints but omitted the cached command targets used by the native executor. Native receipts confirm **zero motor writes for that A6 command**. The calculation now covers both starts and has a regression test. Castor's native Stop remains latched pending a fresh operator inspection; it has not been automatically cleared.
+
+The new evidence archive contains 21 camera/joint captures, including interrupted attempts, with a checksum-verified copy on a separate drive. Private bench images remain private. [Download the board coverage and per-visit metrics](/assets/hiwonder-speed-tests/castor-board-dataset-summary.json), [archive verification](/assets/hiwonder-speed-tests/castor-board-evidence-verification.json), and [the zero-write reconciliation](/assets/hiwonder-speed-tests/castor-board-rate-reconciliation.json).
+
+The next step is to finish ten recorded visits per square after inspection. The current deterministic controller is sufficient to collect this dataset; a neural network is not required for the geometric motion calculation.
