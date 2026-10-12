@@ -1,0 +1,188 @@
+{
+  "schema": "hiwonder-castor-primary-characterization-summary/v2",
+  "robot": "castor-001",
+  "profile_seconds": 1,
+  "state": "completed",
+  "attempted_legs": 20,
+  "arrival_check_passed_legs": 20,
+  "speed_qualified": false,
+  "diagnostic_definition": "No fixed dwell; three fresh sweeps span >=100 ms, causal velocity <=5 mm/s, raw XY <=2 mm, height 18\u201323 mm; gaps/ages <=200 ms, joint receipt skew <=100 ms",
+  "directions": {
+    "G1": {
+      "attempts": 10,
+      "median_request_to_arrival_check_finished_s": 2.5879531679674983,
+      "maximum_request_to_arrival_check_finished_s": 4.237550792982802,
+      "median_post_native_arrival_check_s": 0.16950004640966654,
+      "old_one_second_panel_median_post_native_observation_s": 1.4335180709604174
+    },
+    "F1": {
+      "attempts": 10,
+      "median_request_to_arrival_check_finished_s": 2.0110234945314005,
+      "maximum_request_to_arrival_check_finished_s": 3.377811793005094,
+      "median_post_native_arrival_check_s": 0.17541786597575992,
+      "old_one_second_panel_median_post_native_observation_s": 1.2072300979634747
+    }
+  },
+  "attempts": [
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.6349670449271798,
+      "request_to_arrival_check_finished_s": 1.804123373934999,
+      "post_native_arrival_check_s": 0.1691563290078193,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.721269631991163,
+      "request_to_arrival_check_finished_s": 1.870419149985537,
+      "post_native_arrival_check_s": 0.14914951799437404,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 3.9839785320218652,
+      "request_to_arrival_check_finished_s": 4.237550792982802,
+      "post_native_arrival_check_s": 0.25357226096093655,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.8201237139292061,
+      "request_to_arrival_check_finished_s": 2.0112610938958824,
+      "post_native_arrival_check_s": 0.19113737996667624,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 2.243372981902212,
+      "request_to_arrival_check_finished_s": 2.4125572128687054,
+      "post_native_arrival_check_s": 0.1691842309664935,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.5734912671614438,
+      "request_to_arrival_check_finished_s": 1.7525754261296242,
+      "post_native_arrival_check_s": 0.17908415896818042,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.8926569090690464,
+      "request_to_arrival_check_finished_s": 2.0450085520278662,
+      "post_native_arrival_check_s": 0.15235164295881987,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 2.153002065839246,
+      "request_to_arrival_check_finished_s": 2.427011353895068,
+      "post_native_arrival_check_s": 0.27400928805582225,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 2.7572254040278494,
+      "request_to_arrival_check_finished_s": 2.9262245381250978,
+      "post_native_arrival_check_s": 0.16899913409724832,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.8408417371101677,
+      "request_to_arrival_check_finished_s": 2.0107858951669186,
+      "post_native_arrival_check_s": 0.1699441580567509,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 3.3639455770608038,
+      "request_to_arrival_check_finished_s": 3.6431749791372567,
+      "post_native_arrival_check_s": 0.27922940207645297,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 2.361311007058248,
+      "request_to_arrival_check_finished_s": 2.5514287929981947,
+      "post_native_arrival_check_s": 0.19011778593994677,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.872483836952597,
+      "request_to_arrival_check_finished_s": 2.168581503909081,
+      "post_native_arrival_check_s": 0.2960976669564843,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.7171001511160284,
+      "request_to_arrival_check_finished_s": 1.9074703932274133,
+      "post_native_arrival_check_s": 0.19037024211138487,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.7041387010831386,
+      "request_to_arrival_check_finished_s": 1.8739545629359782,
+      "post_native_arrival_check_s": 0.1698158618528396,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.6015887269750237,
+      "request_to_arrival_check_finished_s": 1.7525183949619532,
+      "post_native_arrival_check_s": 0.15092966798692942,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 2.797681026859209,
+      "request_to_arrival_check_finished_s": 2.9921346728224307,
+      "post_native_arrival_check_s": 0.1944536459632218,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.850012524984777,
+      "request_to_arrival_check_finished_s": 2.0200699931010604,
+      "post_native_arrival_check_s": 0.17005746811628342,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 2.6121273189783096,
+      "request_to_arrival_check_finished_s": 2.763349123066291,
+      "post_native_arrival_check_s": 0.15122180408798158,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 3.2060602200217545,
+      "request_to_arrival_check_finished_s": 3.377811793005094,
+      "post_native_arrival_check_s": 0.17175157298333943,
+      "distinct_endpoint_sweeps": 3,
+      "arrival_check_pass": true
+    }
+  ]
+}

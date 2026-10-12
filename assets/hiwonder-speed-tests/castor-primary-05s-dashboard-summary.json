@@ -1,0 +1,233 @@
+{
+  "schema": "hiwonder-castor-controller-comparison-summary/v1",
+  "robot": "castor-001",
+  "state": "completed",
+  "profile_seconds": 0.5,
+  "fast_observation": false,
+  "packet_mode": "quintic",
+  "metric_basis": "measured_joint_fk",
+  "speed_qualified": false,
+  "attempted_legs": 20,
+  "arrival_checks_passed": 20,
+  "observation_counts": null,
+  "directions": {
+    "G1": {
+      "attempts": 10,
+      "median_request_to_verified_arrival_s": 3.1535898175789043,
+      "worst_request_to_verified_arrival_s": 6.963424825109541,
+      "median_native_issued_to_completed_s": 0.9108200073242188,
+      "maximum_arrival_window_error_mm": 1.0520509252342463,
+      "legs_within_05s": 0
+    },
+    "F1": {
+      "attempts": 10,
+      "median_request_to_verified_arrival_s": 1.9309018426574767,
+      "worst_request_to_verified_arrival_s": 10.021353629883379,
+      "median_native_issued_to_completed_s": 0.9651937484741211,
+      "maximum_arrival_window_error_mm": 0.9753224954912535,
+      "legs_within_05s": 0
+    }
+  },
+  "attempts": [
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.0876248890999705,
+      "request_to_verified_arrival_s": 1.342817157972604,
+      "native_issued_to_completed_s": 0.8518819808959961,
+      "additional_arrival_verification_s": 0.2551922688726336,
+      "maximum_arrival_window_error_mm": 0.8839261282707733,
+      "maximum_raw_post_completion_error_mm": 0.8839261282707733,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.4547973510343581,
+      "request_to_verified_arrival_s": 1.7527851951308548,
+      "native_issued_to_completed_s": 0.8249375820159912,
+      "additional_arrival_verification_s": 0.2979878440964967,
+      "maximum_arrival_window_error_mm": 0.834347109921518,
+      "maximum_raw_post_completion_error_mm": 0.834347109921518,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 4.010217352071777,
+      "request_to_verified_arrival_s": 4.158532838104293,
+      "native_issued_to_completed_s": 0.8394794464111328,
+      "additional_arrival_verification_s": 0.14831548603251576,
+      "maximum_arrival_window_error_mm": 0.8839261282707733,
+      "maximum_raw_post_completion_error_mm": 0.8839261282707733,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.4160008458420634,
+      "request_to_verified_arrival_s": 1.6727507580071688,
+      "native_issued_to_completed_s": 1.0356266498565674,
+      "additional_arrival_verification_s": 0.25674991216510534,
+      "maximum_arrival_window_error_mm": 0.6423641374094909,
+      "maximum_raw_post_completion_error_mm": 0.834347109921518,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.2392982738092542,
+      "request_to_verified_arrival_s": 1.5354759967885911,
+      "native_issued_to_completed_s": 0.9637439250946045,
+      "additional_arrival_verification_s": 0.296177722979337,
+      "maximum_arrival_window_error_mm": 0.8839261282707733,
+      "maximum_raw_post_completion_error_mm": 0.8839261282707733,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.5471125219482929,
+      "request_to_verified_arrival_s": 1.739049464929849,
+      "native_issued_to_completed_s": 1.032365322113037,
+      "additional_arrival_verification_s": 0.19193694298155606,
+      "maximum_arrival_window_error_mm": 0.834347109921518,
+      "maximum_raw_post_completion_error_mm": 0.834347109921518,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.9430399290286005,
+      "request_to_verified_arrival_s": 2.327504002954811,
+      "native_issued_to_completed_s": 0.901315450668335,
+      "additional_arrival_verification_s": 0.3844640739262104,
+      "maximum_arrival_window_error_mm": 1.0520509252342463,
+      "maximum_raw_post_completion_error_mm": 1.0520509252342463,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.181933832122013,
+      "request_to_verified_arrival_s": 1.3514868069905788,
+      "native_issued_to_completed_s": 0.9141008853912354,
+      "additional_arrival_verification_s": 0.1695529748685658,
+      "maximum_arrival_window_error_mm": 0.23994188341153908,
+      "maximum_raw_post_completion_error_mm": 0.23994188341153908,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 6.613584687002003,
+      "request_to_verified_arrival_s": 6.911430562846363,
+      "native_issued_to_completed_s": 0.8255698680877686,
+      "additional_arrival_verification_s": 0.2978458758443594,
+      "maximum_arrival_window_error_mm": 0.8839261282707733,
+      "maximum_raw_post_completion_error_mm": 0.8839261282707733,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 9.766749161994085,
+      "request_to_verified_arrival_s": 10.021353629883379,
+      "native_issued_to_completed_s": 0.9995889663696289,
+      "additional_arrival_verification_s": 0.25460446788929403,
+      "maximum_arrival_window_error_mm": 0.834347109921518,
+      "maximum_raw_post_completion_error_mm": 0.834347109921518,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 3.7258879460860044,
+      "request_to_verified_arrival_s": 3.979675632202998,
+      "native_issued_to_completed_s": 1.0667388439178467,
+      "additional_arrival_verification_s": 0.2537876861169934,
+      "maximum_arrival_window_error_mm": 0.8839261282707733,
+      "maximum_raw_post_completion_error_mm": 0.8839261282707733,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 6.761326881125569,
+      "request_to_verified_arrival_s": 7.0180887510068715,
+      "native_issued_to_completed_s": 0.9436202049255371,
+      "additional_arrival_verification_s": 0.2567618698813021,
+      "maximum_arrival_window_error_mm": 0.23994188341153908,
+      "maximum_raw_post_completion_error_mm": 0.23994188341153908,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 6.709664508001879,
+      "request_to_verified_arrival_s": 6.963424825109541,
+      "native_issued_to_completed_s": 0.9203245639801025,
+      "additional_arrival_verification_s": 0.25376031710766256,
+      "maximum_arrival_window_error_mm": 0.8839261282707733,
+      "maximum_raw_post_completion_error_mm": 0.8839261282707733,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.8547822230029851,
+      "request_to_verified_arrival_s": 2.1090184901840985,
+      "native_issued_to_completed_s": 0.9237136840820312,
+      "additional_arrival_verification_s": 0.25423626718111336,
+      "maximum_arrival_window_error_mm": 0.9753224954912535,
+      "maximum_raw_post_completion_error_mm": 0.9753224954912535,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.6968511720187962,
+      "request_to_verified_arrival_s": 1.8472090610302985,
+      "native_issued_to_completed_s": 1.270097255706787,
+      "additional_arrival_verification_s": 0.15035788901150227,
+      "maximum_arrival_window_error_mm": 0.49366824002229504,
+      "maximum_raw_post_completion_error_mm": 0.49366824002229504,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 2.6302382450085133,
+      "request_to_verified_arrival_s": 2.9042308451607823,
+      "native_issued_to_completed_s": 0.9884412288665771,
+      "additional_arrival_verification_s": 0.273992600152269,
+      "maximum_arrival_window_error_mm": 0.9219667811029765,
+      "maximum_raw_post_completion_error_mm": 0.9219667811029765,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 4.521061655133963,
+      "request_to_verified_arrival_s": 4.775995171163231,
+      "native_issued_to_completed_s": 0.9569807052612305,
+      "additional_arrival_verification_s": 0.2549335160292685,
+      "maximum_arrival_window_error_mm": 0.8839261282707733,
+      "maximum_raw_post_completion_error_mm": 0.8839261282707733,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 2.452364152064547,
+      "request_to_verified_arrival_s": 2.7475685281679034,
+      "native_issued_to_completed_s": 0.9867672920227051,
+      "additional_arrival_verification_s": 0.2952043761033565,
+      "maximum_arrival_window_error_mm": 0.8787381586026547,
+      "maximum_raw_post_completion_error_mm": 0.8787381586026547,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "G1",
+      "request_to_native_return_s": 1.1909375351388007,
+      "request_to_verified_arrival_s": 1.5739284539595246,
+      "native_issued_to_completed_s": 0.8067741394042969,
+      "additional_arrival_verification_s": 0.3829909188207239,
+      "maximum_arrival_window_error_mm": 0.3678364904633176,
+      "maximum_raw_post_completion_error_mm": 1.2412629029887225,
+      "arrival_check_pass": true
+    },
+    {
+      "target_square": "F1",
+      "request_to_native_return_s": 1.4026882469188422,
+      "request_to_verified_arrival_s": 1.5716906348243356,
+      "native_issued_to_completed_s": 0.817058801651001,
+      "additional_arrival_verification_s": 0.16900238790549338,
+      "maximum_arrival_window_error_mm": 0.8787381586026547,
+      "maximum_raw_post_completion_error_mm": 0.8787381586026547,
+      "arrival_check_pass": true
+    }
+  ]
+}
