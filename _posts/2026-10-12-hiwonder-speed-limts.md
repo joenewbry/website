@@ -6,7 +6,7 @@ permalink: /blog/hiwonder-speed-limts/
 
 I want my HiWonder arm to move between adjacent chessboard squares in 0.5 seconds, then make 30 complete F1–G1–F1 roundtrips in at most 65 seconds. The squares are 20 mm wide, and the pointer is commanded to hover 20 mm above the board.
 
-The latest experiment completed all 30 roundtrips with passing modeled arrival checks, but took **93.87 seconds**. The half-second leg target and 65-second run target remain open. The useful finding so far is that command scheduling, status polling and recording overhead account for a substantial part of the delay.
+The latest experiment completed all 30 roundtrips with passing modeled arrival checks, but took **67.56 seconds**. The half-second leg target and 65-second run target remain open. The useful finding so far is that command scheduling, status polling and recording overhead account for a substantial part of the delay.
 
 ## The specification gives an optimistic scale
 
@@ -72,13 +72,27 @@ A shorter requested duration did not reliably make the full operation faster. Th
 
 ## Thirty full roundtrips
 
-The fresh sustained run used the 0.4-second single-target client. Setup finished at F1 before the timer started. The clock then included all 60 legs and every between-leg gap.
+Each sustained run finished setup at F1 before starting the timer, then included all 60 legs and every between-leg gap.
 
-All 60 modeled arrival checks passed. Median verified arrival was **1.11 seconds toward G1** and **1.10 seconds toward F1**; the worst legs took **3.31 and 3.47 seconds** respectively. The full run took **93.87 seconds**. No leg met the half-second requirement.
+| Fresh 30-roundtrip panel | Full elapsed time |
+| --- | ---: |
+| 400 ms targets, growing result-file rewrites | 93.87 s |
+| 400 ms targets, small durable checkpoints | 68.21 s |
+| 375 ms targets, small durable checkpoints | 67.56 s |
 
-The leg intervals totaled 86.75 seconds. Between-leg gaps added 7.13 seconds. Those gaps grew as the experiment rewrote a larger result file. The records also show recording-related dispatch deferrals before writes. Both are concrete places to improve the pipeline; neither should be hidden from the clock.
+All 60 modeled arrival checks passed in each panel. In the latest run, median verified arrival was **1.11 seconds toward G1** and **1.05 seconds toward F1**; the worst legs took **1.39 and 1.25 seconds**. No leg met the half-second requirement, and the total still exceeded 65 seconds.
 
-[Download all 60 sustained observations](/assets/hiwonder-speed-tests/castor-sustained-04s-30cycles-summary.json), [the 0.4-second twenty-trial panel](/assets/hiwonder-speed-tests/castor-primary-04s-observed-summary.json), and [the row-1 results](/assets/hiwonder-speed-tests/castor-row1-1s-summary.json). Raw recordings, native receipts and failed attempts have verified off-host copies. The separate experiment repository is `hiwonder-speed-tests`.
+The first run's leg intervals totaled 86.75 seconds, with between-leg gaps adding 7.13 seconds. Those gaps grew as the experiment rewrote a larger result file. Native logs also recorded 23 dispatch deferrals across the new comparison runs because telemetry rate fell below recording-readiness requirements. Replacing full report rewrites with small durable checkpoints reduced contention. The complete trace is saved after recording ends, while native receipts and recording remain independent.
+
+## Angular speed and acceleration estimates
+
+For the latest 375 ms panel, I calculated velocity from adjacent per-joint encoder receipts and acceleration from three successive readings. I skipped gaps over 200 ms and kept the original positions.
+
+Across thirty trials per direction, the median per-trial peak interval speed of the base was approximately **32 degrees per second**. Median three-point peak acceleration estimates were approximately **179–184 degrees per second squared**. At the observed cadence, changing each of the three samples by one tick changes that acceleration estimate by as much as approximately **62 degrees per second squared**.
+
+That is a sensitivity calculation, not a confidence interval. Host receipt timing, potentiometer error and coarse sampling remain limitations. These estimates characterize the tested motion, not the maximum loaded actuator acceleration or its instantaneous peak.
+
+[Download all 60 latest sustained observations](/assets/hiwonder-speed-tests/castor-sustained-0375s-30cycles-summary.json), [the previous 400 ms checkpoint run](/assets/hiwonder-speed-tests/castor-sustained-04s-30cycles-v2-summary.json), [the retained 93.87-second run](/assets/hiwonder-speed-tests/castor-sustained-04s-30cycles-summary.json), [angular motion estimates](/assets/hiwonder-speed-tests/castor-angular-motion-estimates.json), and [row-1 results](/assets/hiwonder-speed-tests/castor-row1-1s-summary.json). Raw recordings, native receipts and failed attempts have verified off-host copies. The separate experiment repository is `hiwonder-speed-tests`.
 
 ## The next experiments
 

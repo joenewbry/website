@@ -9,7 +9,6 @@
     {
       "square": "A1",
       "correction": false,
-      "result": "/ssd/grape-robot/data/hiwonder-speed-tests/row1-1s-diagnostic-20261012-01/00-A1-0/result.json",
       "distinct_sweeps": 3,
       "maximum_modeled_xy_error_mm": 0.6648650541834383,
       "modeled_height_mm": [
@@ -21,7 +20,6 @@
     {
       "square": "B1",
       "correction": false,
-      "result": "/ssd/grape-robot/data/hiwonder-speed-tests/row1-1s-diagnostic-20261012-01/01-B1-0/result.json",
       "distinct_sweeps": 3,
       "maximum_modeled_xy_error_mm": 0.8441144618798785,
       "modeled_height_mm": [
@@ -33,7 +31,6 @@
     {
       "square": "C1",
       "correction": false,
-      "result": "/ssd/grape-robot/data/hiwonder-speed-tests/row1-1s-diagnostic-20261012-01/02-C1-0/result.json",
       "distinct_sweeps": 3,
       "maximum_modeled_xy_error_mm": 1.5103287926340214,
       "modeled_height_mm": [
@@ -45,7 +42,6 @@
     {
       "square": "D1",
       "correction": false,
-      "result": "/ssd/grape-robot/data/hiwonder-speed-tests/row1-1s-diagnostic-20261012-01/03-D1-0/result.json",
       "distinct_sweeps": 3,
       "maximum_modeled_xy_error_mm": 1.0278590675464883,
       "modeled_height_mm": [
@@ -57,7 +53,6 @@
     {
       "square": "E1",
       "correction": false,
-      "result": "/ssd/grape-robot/data/hiwonder-speed-tests/row1-1s-diagnostic-20261012-01/04-E1-0/result.json",
       "distinct_sweeps": 3,
       "maximum_modeled_xy_error_mm": 1.0789633588492955,
       "modeled_height_mm": [
@@ -69,7 +64,6 @@
     {
       "square": "F1",
       "correction": false,
-      "result": "/ssd/grape-robot/data/hiwonder-speed-tests/row1-1s-diagnostic-20261012-01/05-F1-0/result.json",
       "distinct_sweeps": 3,
       "maximum_modeled_xy_error_mm": 0.834347109921518,
       "modeled_height_mm": [
@@ -81,7 +75,6 @@
     {
       "square": "G1",
       "correction": false,
-      "result": "/ssd/grape-robot/data/hiwonder-speed-tests/row1-1s-diagnostic-20261012-01/06-G1-0/result.json",
       "distinct_sweeps": 3,
       "maximum_modeled_xy_error_mm": 1.5623534006221282,
       "modeled_height_mm": [
@@ -93,7 +86,6 @@
     {
       "square": "H1",
       "correction": false,
-      "result": "/ssd/grape-robot/data/hiwonder-speed-tests/row1-1s-diagnostic-20261012-01/07-H1-0/result.json",
       "distinct_sweeps": 3,
       "maximum_modeled_xy_error_mm": 1.7386021316450058,
       "modeled_height_mm": [

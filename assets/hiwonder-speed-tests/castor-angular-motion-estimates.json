@@ -1,0 +1,1463 @@
+{
+  "schema": "hiwonder-castor-angular-motion-estimates/v1",
+  "robot": "castor-001",
+  "profile_seconds": 0.375,
+  "method": "Adjacent receipt intervals for velocity; centered three-point finite difference for acceleration; no gaps above 200 ms bridged. +/-1 tick perturbation is sensitivity, not a confidence interval.",
+  "hardware_maximum_speed_or_acceleration_qualified": false,
+  "directions": {
+    "G1": {
+      "base": {
+        "maximum_absolute_interval_velocity_deg_s": {
+          "median": 32.02259752935967,
+          "maximum": 35.60452750699047,
+          "trials_with_estimates": 30
+        },
+        "maximum_absolute_three_point_acceleration_deg_s2": {
+          "median": 179.37321252706676,
+          "maximum": 234.06881828927982,
+          "trials_with_estimates": 30
+        },
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": {
+          "median": 62.43699238290294,
+          "maximum": 65.57401982374408,
+          "trials_with_estimates": 30
+        }
+      },
+      "wrist_pitch": {
+        "maximum_absolute_interval_velocity_deg_s": {
+          "median": 9.679591288442051,
+          "maximum": 15.488716156566928,
+          "trials_with_estimates": 30
+        },
+        "maximum_absolute_three_point_acceleration_deg_s2": {
+          "median": 67.67026244929545,
+          "maximum": 137.18067176168157,
+          "trials_with_estimates": 30
+        },
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": {
+          "median": 62.45010693232585,
+          "maximum": 64.5068879624536,
+          "trials_with_estimates": 30
+        }
+      }
+    },
+    "F1": {
+      "base": {
+        "maximum_absolute_interval_velocity_deg_s": {
+          "median": 32.63491792706076,
+          "maximum": 36.666713776472356,
+          "trials_with_estimates": 30
+        },
+        "maximum_absolute_three_point_acceleration_deg_s2": {
+          "median": 184.43934550708826,
+          "maximum": 234.12671340466915,
+          "trials_with_estimates": 30
+        },
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": {
+          "median": 62.45014390641257,
+          "maximum": 63.54078394063041,
+          "trials_with_estimates": 30
+        }
+      },
+      "wrist_pitch": {
+        "maximum_absolute_interval_velocity_deg_s": {
+          "median": 11.48088534988825,
+          "maximum": 17.145267747649545,
+          "trials_with_estimates": 30
+        },
+        "maximum_absolute_three_point_acceleration_deg_s2": {
+          "median": 78.32635054135235,
+          "maximum": 149.77968134612047,
+          "trials_with_estimates": 30
+        },
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": {
+          "median": 62.449710911840036,
+          "maximum": 64.47173511189081,
+          "trials_with_estimates": 30
+        }
+      }
+    }
+  },
+  "attempts": [
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 30.46842488985409,
+        "maximum_absolute_three_point_acceleration_deg_s2": 181.78925244031092,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.420247880954676,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 9.67300583666935,
+        "maximum_absolute_three_point_acceleration_deg_s2": 45.36116737686897,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.45002757189499,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 31.097412482502293,
+        "maximum_absolute_three_point_acceleration_deg_s2": 187.16262097516832,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.32516440186399,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 9.233961814148982,
+        "maximum_absolute_three_point_acceleration_deg_s2": 57.26986500848575,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.46657937813825,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 11,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 10,
+        "three_point_acceleration_estimates": 9,
+        "maximum_absolute_interval_velocity_deg_s": 35.60452750699047,
+        "maximum_absolute_three_point_acceleration_deg_s2": 227.99240888341245,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 64.88944513453914,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 11,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 10,
+        "three_point_acceleration_estimates": 9,
+        "maximum_absolute_interval_velocity_deg_s": 13.776013137829912,
+        "maximum_absolute_three_point_acceleration_deg_s2": 80.38770263372452,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 64.5068879624536,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 34.83714871846143,
+        "maximum_absolute_three_point_acceleration_deg_s2": 193.20312722057648,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.43873239019399,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 9.527456651775573,
+        "maximum_absolute_three_point_acceleration_deg_s2": 46.83501902886315,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.41929194544686,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 34.83500550803712,
+        "maximum_absolute_three_point_acceleration_deg_s2": 218.47140628931248,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.41568790336097,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 9.68044759785433,
+        "maximum_absolute_three_point_acceleration_deg_s2": 58.94476087742287,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.44389860698111,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 34.84023004551302,
+        "maximum_absolute_three_point_acceleration_deg_s2": 197.18320824157712,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.46784152805918,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 13.55145375940428,
+        "maximum_absolute_three_point_acceleration_deg_s2": 101.11257386372385,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 64.01242217784582,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 34.83768456227445,
+        "maximum_absolute_three_point_acceleration_deg_s2": 222.65750208945724,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.433690178363044,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 10.1407798252168,
+        "maximum_absolute_three_point_acceleration_deg_s2": 76.24201368411583,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.3821099381419,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 31.22743987917874,
+        "maximum_absolute_three_point_acceleration_deg_s2": 188.28043361743667,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.45391285610468,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.509318646210536,
+        "maximum_absolute_three_point_acceleration_deg_s2": 77.98228046209252,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.41498144599876,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 30.05163561337575,
+        "maximum_absolute_three_point_acceleration_deg_s2": 161.45595103294607,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.43441144923375,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 9.523634794850253,
+        "maximum_absolute_three_point_acceleration_deg_s2": 60.4650401174711,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.45585883396494,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 29.99630749976254,
+        "maximum_absolute_three_point_acceleration_deg_s2": 176.09966129364085,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.63974229398437,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 9.375120700959647,
+        "maximum_absolute_three_point_acceleration_deg_s2": 53.02211015146626,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.44892197710429,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 29.032073632418566,
+        "maximum_absolute_three_point_acceleration_deg_s2": 156.08542561945717,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.46023542147003,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.61356633029781,
+        "maximum_absolute_three_point_acceleration_deg_s2": 92.90853064238247,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.425768335635084,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 33.42172807968361,
+        "maximum_absolute_three_point_acceleration_deg_s2": 162.7430627646494,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.432782201260174,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.453805407742577,
+        "maximum_absolute_three_point_acceleration_deg_s2": 88.69594936233014,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.35077308450235,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 32.898652199490165,
+        "maximum_absolute_three_point_acceleration_deg_s2": 156.0387958098639,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.438133631343916,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.611400624037557,
+        "maximum_absolute_three_point_acceleration_deg_s2": 78.02404951426614,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.4359711420044,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 32.88524941484844,
+        "maximum_absolute_three_point_acceleration_deg_s2": 182.6660525566366,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.479020628929426,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 9.57760364138729,
+        "maximum_absolute_three_point_acceleration_deg_s2": 60.950264290539515,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.44624309045158,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 31.469757267041423,
+        "maximum_absolute_three_point_acceleration_deg_s2": 154.11893729241234,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.45510664049864,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.793416475798278,
+        "maximum_absolute_three_point_acceleration_deg_s2": 80.10999657020633,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.452520643780254,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 34.28644765748736,
+        "maximum_absolute_three_point_acceleration_deg_s2": 190.51380327825066,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.44363008234637,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.613811976856205,
+        "maximum_absolute_three_point_acceleration_deg_s2": 92.9089895312593,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.44203280707343,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 34.28080415015949,
+        "maximum_absolute_three_point_acceleration_deg_s2": 212.29393105280195,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.427088408538054,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.428794259676955,
+        "maximum_absolute_three_point_acceleration_deg_s2": 46.797216483306265,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.43127081731074,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 30.96945066482074,
+        "maximum_absolute_three_point_acceleration_deg_s2": 234.12671340466915,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.447189091291044,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 9.834875636764387,
+        "maximum_absolute_three_point_acceleration_deg_s2": 78.67042062061218,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.4575455807192,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 34.83353220383297,
+        "maximum_absolute_three_point_acceleration_deg_s2": 234.06881828927982,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.43585113446196,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 9.67767420396862,
+        "maximum_absolute_three_point_acceleration_deg_s2": 46.82861396140141,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.43885228000177,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 32.896691676422584,
+        "maximum_absolute_three_point_acceleration_deg_s2": 170.0345694743257,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.45144396738127,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.432580082794336,
+        "maximum_absolute_three_point_acceleration_deg_s2": 72.31251806260556,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.45165887552299,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 30.469520051154184,
+        "maximum_absolute_three_point_acceleration_deg_s2": 150.83581553032164,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.43210170965823,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 9.696206023664672,
+        "maximum_absolute_three_point_acceleration_deg_s2": 72.96396228780205,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.44210379114953,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 34.83708173914381,
+        "maximum_absolute_three_point_acceleration_deg_s2": 195.88902995668954,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.43723272681844,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 9.80969171524305,
+        "maximum_absolute_three_point_acceleration_deg_s2": 58.234391073736184,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.42708961908995,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 32.37319137585626,
+        "maximum_absolute_three_point_acceleration_deg_s2": 177.58920531470906,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.43867733644435,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 9.52823221394942,
+        "maximum_absolute_three_point_acceleration_deg_s2": 63.00333887597718,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.442701625851775,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 32.91029366401145,
+        "maximum_absolute_three_point_acceleration_deg_s2": 169.49132878779554,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.49192713440631,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.611445269619482,
+        "maximum_absolute_three_point_acceleration_deg_s2": 77.64841872948287,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.44401437506276,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 32.90542096185241,
+        "maximum_absolute_three_point_acceleration_deg_s2": 195.80265240653043,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.43513608661121,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 11.611422946785604,
+        "maximum_absolute_three_point_acceleration_deg_s2": 49.34324289867173,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.445712681575955,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 34.28657741513693,
+        "maximum_absolute_three_point_acceleration_deg_s2": 189.23937925850618,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.583291221629835,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 10.14171635826309,
+        "maximum_absolute_three_point_acceleration_deg_s2": 60.702762833500685,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.42792929097876,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 31.64402136291139,
+        "maximum_absolute_three_point_acceleration_deg_s2": 177.91040730941333,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.424328325312494,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 8.218981911646797,
+        "maximum_absolute_three_point_acceleration_deg_s2": 45.54868985699742,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.47743693851587,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 34.29780516982904,
+        "maximum_absolute_three_point_acceleration_deg_s2": 191.7659531033309,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.46233026890729,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.668845490811718,
+        "maximum_absolute_three_point_acceleration_deg_s2": 76.14693550075265,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.47745793064577,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 29.99278837988827,
+        "maximum_absolute_three_point_acceleration_deg_s2": 181.11591498785293,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 65.57401982374408,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 8.334737811279762,
+        "maximum_absolute_three_point_acceleration_deg_s2": 48.36692576763373,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 64.49339331829664,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 36.666713776472356,
+        "maximum_absolute_three_point_acceleration_deg_s2": 186.21263845753995,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.43302195723162,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.429075406039068,
+        "maximum_absolute_three_point_acceleration_deg_s2": 104.76054144722268,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.46764385955334,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 31.672003682863092,
+        "maximum_absolute_three_point_acceleration_deg_s2": 162.08210435030435,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.41340805979204,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 9.677264844203636,
+        "maximum_absolute_three_point_acceleration_deg_s2": 78.02695984111851,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.438492161587995,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 34.285863760217985,
+        "maximum_absolute_three_point_acceleration_deg_s2": 190.48898835913846,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.410268717856084,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 17.145267747649545,
+        "maximum_absolute_three_point_acceleration_deg_s2": 149.77968134612047,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.46835156751483,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 34.278793694155574,
+        "maximum_absolute_three_point_acceleration_deg_s2": 227.75577866526118,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.4275687105729,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 9.678306919003319,
+        "maximum_absolute_three_point_acceleration_deg_s2": 62.48178648474314,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.42648985198849,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 30.964151693536913,
+        "maximum_absolute_three_point_acceleration_deg_s2": 171.46595015284993,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.497561686212016,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 9.676018370952518,
+        "maximum_absolute_three_point_acceleration_deg_s2": 76.06711935310162,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.4623651099739,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 29.509009148099143,
+        "maximum_absolute_three_point_acceleration_deg_s2": 146.61324585435804,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 64.39386371407905,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 9.836201822168544,
+        "maximum_absolute_three_point_acceleration_deg_s2": 58.70775498705295,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 64.48217917573137,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 34.28742086379945,
+        "maximum_absolute_three_point_acceleration_deg_s2": 187.31902678767432,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.43200966120873,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.61416929949215,
+        "maximum_absolute_three_point_acceleration_deg_s2": 77.68309290402134,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.299382906253804,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 30.981961046830364,
+        "maximum_absolute_three_point_acceleration_deg_s2": 165.87375879275484,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.42504805635448,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 9.230557960063967,
+        "maximum_absolute_three_point_acceleration_deg_s2": 72.33718602261372,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.45450118307574,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 32.10923477516347,
+        "maximum_absolute_three_point_acceleration_deg_s2": 154.33307055760417,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.480667912962126,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.604440115049195,
+        "maximum_absolute_three_point_acceleration_deg_s2": 93.57856206164153,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 64.47173511189081,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 29.03034330011074,
+        "maximum_absolute_three_point_acceleration_deg_s2": 156.04221841186322,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.47172297473924,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 9.683185323134225,
+        "maximum_absolute_three_point_acceleration_deg_s2": 62.42930872186624,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.36201303815759,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 32.89884193993037,
+        "maximum_absolute_three_point_acceleration_deg_s2": 217.44180471391996,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.4258883897973,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.615308412149558,
+        "maximum_absolute_three_point_acceleration_deg_s2": 76.80438520614057,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.45049984657578,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 31.46342520023442,
+        "maximum_absolute_three_point_acceleration_deg_s2": 176.90592740606633,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.435141702755516,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 9.841029080237053,
+        "maximum_absolute_three_point_acceleration_deg_s2": 59.520222947699594,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 64.02200588682621,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 30.96629487923894,
+        "maximum_absolute_three_point_acceleration_deg_s2": 171.6811082428319,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.437171776023604,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 11.612740140857255,
+        "maximum_absolute_three_point_acceleration_deg_s2": 92.88092810397688,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.44798832255715,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 34.83748361891285,
+        "maximum_absolute_three_point_acceleration_deg_s2": 217.72459928215386,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.45567769907426,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 15.236835425314933,
+        "maximum_absolute_three_point_acceleration_deg_s2": 121.9007285894078,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.450159204208596,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 30.966056732843448,
+        "maximum_absolute_three_point_acceleration_deg_s2": 144.25993105050827,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.44642980207284,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 15.737646113889394,
+        "maximum_absolute_three_point_acceleration_deg_s2": 143.6247030991348,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.53113881896405,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 11,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 30.96296116299546,
+        "maximum_absolute_three_point_acceleration_deg_s2": 156.26314335099715,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.426008607099426,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 11,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 9.678734979029773,
+        "maximum_absolute_three_point_acceleration_deg_s2": 75.59118374952197,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.45938728094529,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 32.384586439273086,
+        "maximum_absolute_three_point_acceleration_deg_s2": 171.66363088581988,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.44884384544387,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 13.54686845383657,
+        "maximum_absolute_three_point_acceleration_deg_s2": 88.65495117587645,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.42336785211726,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 29.038717791906578,
+        "maximum_absolute_three_point_acceleration_deg_s2": 141.3917461608463,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.5238634778931,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 9.676483435356362,
+        "maximum_absolute_three_point_acceleration_deg_s2": 55.41226136798582,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.503759676823435,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 34.832929524395404,
+        "maximum_absolute_three_point_acceleration_deg_s2": 195.8677807605058,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.44927693662009,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.507965292033923,
+        "maximum_absolute_three_point_acceleration_deg_s2": 84.61840711028667,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 60.468808725498285,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 34.81084567059231,
+        "maximum_absolute_three_point_acceleration_deg_s2": 197.4744208145835,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.544083927069664,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 15.488716156566928,
+        "maximum_absolute_three_point_acceleration_deg_s2": 90.3893495445596,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.44109906523852,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 30.957188388359143,
+        "maximum_absolute_three_point_acceleration_deg_s2": 171.43037559928376,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.37715342416493,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.409751810697566,
+        "maximum_absolute_three_point_acceleration_deg_s2": 90.74896516151405,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.34778788825974,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 32.90086597414882,
+        "maximum_absolute_three_point_acceleration_deg_s2": 202.90514297656938,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.41955309208263,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 9.676446228558904,
+        "maximum_absolute_three_point_acceleration_deg_s2": 78.02448470576805,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.467243413411104,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 30.96587812545061,
+        "maximum_absolute_three_point_acceleration_deg_s2": 164.83201588935847,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.458229381105205,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 10,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 9,
+        "three_point_acceleration_estimates": 8,
+        "maximum_absolute_interval_velocity_deg_s": 15.227586958042684,
+        "maximum_absolute_three_point_acceleration_deg_s2": 120.83632837292765,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.444010338377055,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 11,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 10,
+        "three_point_acceleration_estimates": 9,
+        "maximum_absolute_interval_velocity_deg_s": 34.83822042257177,
+        "maximum_absolute_three_point_acceleration_deg_s2": 202.5057572933788,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.44285330342481,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 11,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 10,
+        "three_point_acceleration_estimates": 9,
+        "maximum_absolute_interval_velocity_deg_s": 9.675832357707636,
+        "maximum_absolute_three_point_acceleration_deg_s2": 137.18067176168157,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.450695915858326,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 31.016805020885048,
+        "maximum_absolute_three_point_acceleration_deg_s2": 172.3369594980897,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.54078394063041,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 7,
+        "three_point_acceleration_estimates": 6,
+        "maximum_absolute_interval_velocity_deg_s": 15.740353036146038,
+        "maximum_absolute_three_point_acceleration_deg_s2": 118.35423307692143,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.47535271210214,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 34.83627800742122,
+        "maximum_absolute_three_point_acceleration_deg_s2": 218.40604394995162,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.441134308125015,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 13.335334432242057,
+        "maximum_absolute_three_point_acceleration_deg_s2": 75.81798765770178,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.44302133803478,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 31.46797419435511,
+        "maximum_absolute_three_point_acceleration_deg_s2": 166.41472458331825,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.44110057058208,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 9.678139427560547,
+        "maximum_absolute_three_point_acceleration_deg_s2": 47.35083739912819,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.600496615734656,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 32.952626580450364,
+        "maximum_absolute_three_point_acceleration_deg_s2": 180.8360177447202,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.45939963161337,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 9.675943964796327,
+        "maximum_absolute_three_point_acceleration_deg_s2": 40.76826740500713,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.426608484484035,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 30.958854535284473,
+        "maximum_absolute_three_point_acceleration_deg_s2": 168.8298838696287,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.428193778200395,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 9.999549276746793,
+        "maximum_absolute_three_point_acceleration_deg_s2": 59.73774495624869,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 61.426756673667526,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "G1",
+      "base": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 29.999690853761514,
+        "maximum_absolute_three_point_acceleration_deg_s2": 166.102271325593,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.42444874219328,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 9,
+        "gaps_over_200ms": 0,
+        "interval_velocity_estimates": 8,
+        "three_point_acceleration_estimates": 7,
+        "maximum_absolute_interval_velocity_deg_s": 9.676092778253054,
+        "maximum_absolute_three_point_acceleration_deg_s2": 77.98340517058266,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.35563166019758,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    },
+    {
+      "target_square": "F1",
+      "base": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 30.714277382015325,
+        "maximum_absolute_three_point_acceleration_deg_s2": 195.64468674025898,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 62.747336457110116,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      },
+      "wrist_pitch": {
+        "distinct_receipts": 8,
+        "gaps_over_200ms": 1,
+        "interval_velocity_estimates": 6,
+        "three_point_acceleration_estimates": 5,
+        "maximum_absolute_interval_velocity_deg_s": 11.198871471959237,
+        "maximum_absolute_three_point_acceleration_deg_s2": 98.3352140629821,
+        "maximum_acceleration_sensitivity_to_each_sample_plus_minus_one_tick_deg_s2": 63.11822554340268,
+        "scope": "Host-receipt interval estimates at tested duration; acquisition latency, coarse sampling and potentiometer error remain. Not a loaded maximum acceleration or speed limit."
+      }
+    }
+  ]
+}
