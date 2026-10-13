@@ -1,0 +1,14 @@
+{
+  "schema": "hiwonder-castor-explicit-inspection-recovery/v1",
+  "at": 1791847653.1348715,
+  "user_authorization": "Bench is inspected go for it",
+  "inspection_id": "960a9941635945308b3996d181210dca",
+  "worker": "cfb7bfa4af2d489fafa971a6c9e8bf18",
+  "counter_before": 8962,
+  "counter_after": 8962,
+  "motor_commands_sent": 0,
+  "native_helper": "bench.manual.ManualClient.begin(inspected=True)",
+  "archived_stop_sha256": "794cab7f276ec3da0c1ec417c6ba22d9c303f12e20da5bcb776f3215cbec2023",
+  "controller_heartbeat_fabricated": false,
+  "new_motion_run_started": false
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "hiwonder-castor-g7-xy-reconciliation/v1",
+  "robot": "castor-001",
+  "failed_panel_state": "interrupted",
+  "native_terminal_state": "complete",
+  "path_id": "428169db7986440d87c262723cced586",
+  "target_square": "G7",
+  "phase": "board_correction",
+  "commanded_endpoint": [
+    441,
+    407,
+    877,
+    379,
+    469,
+    500
+  ],
+  "measured_endpoint": [
+    439,
+    401,
+    880,
+    378,
+    469,
+    500
+  ],
+  "modeled_endpoint_mm": [
+    44.65103409227145,
+    50.098158716848104,
+    18.700064107359744
+  ],
+  "modeled_xy_error_mm": 5.3498664857859355,
+  "static_modeled_quality_pass": false,
+  "failed_attempt_preserved": true,
+  "counter_after": 10631,
+  "native_fault": null,
+  "native_stop_present": false,
+  "unknown_dispatch": false,
+  "diagnosis": "Bounded native completion does not guarantee the tighter modeled arrival band; correction overshot horizontal target",
+  "next_step": "A separate screened recorded canary, retaining the interrupted batch and failed correction"
+}

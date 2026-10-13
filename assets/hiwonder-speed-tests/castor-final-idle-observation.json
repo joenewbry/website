@@ -1,0 +1,28 @@
+{
+  "schema": "hiwonder-castor-final-idle-observation/v1",
+  "at": 1791849622.2591016,
+  "worker": "cfb7bfa4af2d489fafa971a6c9e8bf18",
+  "connected": true,
+  "run": null,
+  "fault": null,
+  "armed": false,
+  "held": false,
+  "movement_commands": 10772,
+  "last_commanded_square": "A1",
+  "measured_positions": [
+    643,
+    461,
+    858,
+    151,
+    469,
+    500
+  ],
+  "modeled_board_mm": [
+    -70.31700708703258,
+    -68.73286255249609,
+    21.173585379235178
+  ],
+  "modeled_xy_error_mm": 1.3061894212156262,
+  "independent_physical_metrology": false,
+  "scope": "Later idle observation; dataset success applies to each saved arrival window and frame, not an indefinitely held accuracy guarantee"
+}

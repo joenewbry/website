@@ -1,0 +1,18 @@
+{
+  "schema": "hiwonder-castor-a6-correction-preparation-reconciliation/v1",
+  "robot": "castor-001",
+  "failed_panel_state": "interrupted",
+  "failed_square": "A6",
+  "primary_native_terminal_state": "complete",
+  "primary_path_id": "ec8036f771204523984f07859082e19b",
+  "correction_prepared": false,
+  "correction_motor_commands_sent": 0,
+  "reason": "Compensated correction candidate exceeded the unchanged 28 mm command-height ceiling",
+  "change": "Rank candidates only after applying existing height, joint-limit and eight-tick screens",
+  "height_ceiling_mm": 28,
+  "native_stop_present": false,
+  "native_worker_fault": null,
+  "counter_after_primary": 10551,
+  "original_attempt_preserved": true,
+  "unknown_dispatch": false
+}

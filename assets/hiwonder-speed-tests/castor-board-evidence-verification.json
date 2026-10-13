@@ -1,24 +1,29 @@
 {
-  "schema": "hiwonder-castor-board-evidence-verification/v1",
-  "bytes": 228379080,
-  "sha256": "c096d9d64fef37d9fafe8cde83f16cd57f3cbc31480ac09eaa2c924d76331bc4",
+  "schema": "hiwonder-castor-board-evidence-verification/v2",
+  "bytes": 909586096,
+  "sha256": "247114fffd707efc6be8a4194ee5920ccfd120a5c1084aee56bd2ca9ee8515d2",
   "ssd_uuid": "f2636e50-504d-40ea-9e93-5f5ad31b667f",
   "off_host_volume_uuid": "6BF35CE1-D3D2-3BDA-8192-2F01CAA07C52",
   "off_host_copy_verified": true,
-  "experiment_count": 22,
-  "capture_count": 21,
-  "verified_durable_endpoint_frames": 122,
-  "confirmed_coordinated_packets": 188,
-  "confirmed_joint_commands": 515,
-  "rows_written": 5501,
+  "experiment_count": 38,
+  "capture_count": 37,
+  "verified_durable_endpoint_frames": 727,
+  "confirmed_coordinated_packets": 793,
+  "confirmed_joint_commands": 2325,
+  "capture_states": {
+    "completed": 22,
+    "interrupted": 15
+  },
+  "rows_written": 22015,
   "rows_or_events_dropped": 0,
   "captures_with_writer_errors": 0,
   "writer_uncertain_batch_items": 0,
   "writer_skipped_items_after_error": 0,
-  "capture_states": {
-    "completed": 9,
-    "interrupted": 12
-  },
-  "stop_preserved": true,
-  "manifest_hashes_verified": true
+  "prior_stop_evidence_preserved": true,
+  "live_stop_present": false,
+  "manifest_hashes_verified": true,
+  "archived_stop_hash_verified": true,
+  "final_movement_commands": 10772,
+  "independent_physical_metrology": false,
+  "training_eligible": false
 }

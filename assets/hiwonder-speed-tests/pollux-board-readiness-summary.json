@@ -1,0 +1,38 @@
+{
+  "schema": "hiwonder-pollux-board-readiness/v1",
+  "robot": "pollux-002",
+  "at": 1791849219.8923163,
+  "owner_generation": "25f2d9b954494f538ca0d3e1ef6351c2",
+  "connected": true,
+  "owner_valid": true,
+  "worker_fault": null,
+  "geometry_sha256": "74afd6f35b57f2700222ee428a9e3d16f81f092d1261d84968fbda32ede0163e",
+  "geometry_qualified": false,
+  "calibration_qualified": false,
+  "physical_joint_limits_available": false,
+  "stop_latched": true,
+  "stop_sha256": "8ce48af292453e938d7c5cf1ae07b4a9f5e8cbc1edd6d23b1bf70d70a55defe6",
+  "movement_count_before": 0,
+  "movement_count_after": 0,
+  "motor_commands_sent": 0,
+  "camera_frames": {
+    "1": 0,
+    "2": 3
+  },
+  "recording_preflight_passed": false,
+  "collection_ready": false,
+  "reasons": [
+    "camera_1_three_fresh_distinct_frames_unavailable",
+    "pollux_board_geometry_unqualified",
+    "native_calibration_unqualified",
+    "physical_joint_limits_unqualified",
+    "native_stop_requires_inspected_operator_resume"
+  ],
+  "hardware_admitted": false,
+  "automatic_resume": false,
+  "python_tests_passed": 85,
+  "cpp_test_executables_passed": 2,
+  "verified_on": "Linux aarch64",
+  "source_file_count": 62,
+  "owner_changed": false
+}

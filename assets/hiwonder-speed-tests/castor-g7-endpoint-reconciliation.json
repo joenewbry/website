@@ -1,0 +1,39 @@
+{
+  "schema": "hiwonder-castor-g7-endpoint-reconciliation/v1",
+  "robot": "castor-001",
+  "failed_panel_state": "interrupted",
+  "failed_square": "G7",
+  "failed_phase": "board_correction",
+  "native_terminal_state": "complete",
+  "last_path_id": "f5f5f51ee4da4d9a90e2a63304c9732d",
+  "last_dispatched_waypoint_index": 0,
+  "last_command_target": [
+    435,
+    405,
+    879,
+    383,
+    470,
+    500
+  ],
+  "native_complete_measured_positions": [
+    434,
+    399,
+    880,
+    379,
+    469,
+    500
+  ],
+  "arrival_window_quality_pass": false,
+  "durable_endpoint_within_band": true,
+  "held_candidate_modeled_height_mm": 18.074810188571416,
+  "cause": "Held-posture correction accepted a candidate barely above the 18 mm floor, leaving insufficient encoder/deadband margin",
+  "change": "Correction now requires 20\u201321.5 mm modeled reference height; otherwise solve at 21 mm with each joint change <=8 ticks",
+  "failed_attempt_preserved": true,
+  "native_stop_present": false,
+  "native_worker_fault": null,
+  "unknown_dispatch": false,
+  "counter_before": 10183,
+  "counter_after": 10240,
+  "new_motor_command_retried": false,
+  "independent_physical_metrology": false
+}
