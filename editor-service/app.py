@@ -15,7 +15,7 @@ DATA=Path(os.environ.get('BLOG_DATA','/ssd/blog-editor/data'))
 CONFIG=Path(os.environ.get('BLOG_CONFIG','/etc/blog-editor/config.json'))
 REPO=Path(os.environ.get('BLOG_REPO','/ssd/blog-editor/website'))
 LOCK=threading.Lock()
-RENDER=MarkdownIt('commonmark',{'html':False,'breaks':False})
+RENDER=MarkdownIt('commonmark',{'html':False,'breaks':False}).enable('table')
 SLUG=re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 ORIGINS=['https://joenewbry.com','https://www.joenewbry.com']
 if os.environ.get('BLOG_DEV')=='1': ORIGINS+=['http://127.0.0.1:8138']

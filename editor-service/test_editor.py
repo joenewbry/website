@@ -43,6 +43,40 @@ def test_safe_preview_and_slug(client):
     assert '<script>' not in r.json()['html'] and 'href="javascript:' not in r.json()['html']
     assert client.put('/api/drafts/INVALID',headers=headers(),json={'title':'Title','body':'x','version':0}).status_code==400
 
+
+def test_preview_renders_revenue_table_without_changing_draft(client):
+    body='''| Business | Revenue | Growth from a year earlier |
+| --- | ---: | ---: |
+| Space | $1.77 billion | 6% |
+| Connectivity, including Starlink | $5.25 billion | 69% |
+| Super Intelligence, its AI segment | $7.56 billion | 830% |
+
+Source: [Download results (PDF)](https://ir.spacex.com/results.pdf).
+'''
+    assert draft(client,body=body).status_code==200
+    r=client.post('/api/preview',headers=headers(),json={'title':'Revenue','body':body,'version':1})
+    assert r.status_code==200
+    rendered=r.json()['html']
+    assert '<table>' in rendered and '<thead>' in rendered and '<tbody>' in rendered
+    assert rendered.count('<tr>')==4
+    assert '<td style="text-align:right">$7.56 billion</td>' in rendered
+    assert '<td style="text-align:right">830%</td>' in rendered
+    assert 'href="https://ir.spacex.com/results.pdf"' in rendered
+    saved=client.get('/api/drafts/test-post',headers=headers()).json()
+    assert saved['body']==body and saved['version']==1 and saved['status']=='draft'
+
+
+def test_table_cells_preserve_safe_markdown_and_escaped_pipes(client):
+    body=r'''| Business | Notes |
+| --- | --- |
+| **Space** | Escaped \| divider |
+| <script>alert(1)</script> | [bad](javascript:alert(1)) |
+'''
+    rendered=client.post('/api/preview',headers=headers(),json={'title':'Safe table','body':body,'version':0}).json()['html']
+    assert '<table>' in rendered and '<strong>Space</strong>' in rendered
+    assert 'Escaped | divider' in rendered
+    assert '<script>' not in rendered and 'href="javascript:' not in rendered
+
 def test_explicit_publish_and_private_later_edits(client,monkeypatch):
     draft(client)
     monkeypatch.setattr(app,'publish_to_github',lambda d:{'published_url':'https://joenewbry.com/blog/2026/09/08/test-post/','published_date':'2026-09-08','commit':'fixture'})
