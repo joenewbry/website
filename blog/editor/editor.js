@@ -13,6 +13,28 @@ function guard(){return !dirty||confirm('You have unsaved writing. Leave without
 function draftFromFields(){return {title:$('#postTitle').value,body:$('#postBody').value,version:current?.version||0};}
 function slugify(s){return s.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,85).replace(/-$/,'');}
 function writeMode(){ $('#writePane').hidden=false;$('#previewPane').hidden=true;$('#writeTab').classList.add('selected');$('#previewTab').classList.remove('selected');$('#writeTab').setAttribute('aria-pressed','true');$('#previewTab').setAttribute('aria-pressed','false');}
+function attachPdfDownloads(documents={}){
+  for(const link of $('#previewPane').querySelectorAll('a[href]')){
+    let source;try{const url=new URL(link.href);url.hash='';source=url.href;}catch{continue;}
+    const path=documents[source];
+    if(typeof path!=='string'||!/^\/documents\/[a-z0-9-]+$/.test(path))continue;
+    const button=document.createElement('button');button.type='button';button.className='pdf-download';button.textContent='Download PDF';
+    button.onclick=async()=>{
+      button.disabled=true;button.textContent='Downloading…';
+      try{
+        const response=await fetch(API+path,{headers:{'Authorization':'Basic '+auth,'X-Blog-Request':'1'},cache:'no-store'});
+        if(!response.ok)throw new Error('The PDF could not be downloaded. Please try again.');
+        const blob=await response.blob();
+        if(!blob.type.toLowerCase().startsWith('application/pdf')||await blob.slice(0,5).text()!=='%PDF-')throw new Error('The download did not contain a valid PDF.');
+        const objectUrl=URL.createObjectURL(blob),download=document.createElement('a');
+        download.href=objectUrl;download.download=path.split('/').pop()+'.pdf';document.body.appendChild(download);download.click();download.remove();
+        setTimeout(()=>URL.revokeObjectURL(objectUrl),60000);button.textContent='Download again';say('PDF download started.');
+      }catch(e){button.textContent='Retry PDF download';say(e.message,true);}
+      finally{button.disabled=false;}
+    };
+    link.insertAdjacentElement('afterend',button);
+  }
+}
 function stopPublicationCheck(){publicationRun++;clearTimeout(publicationTimer);publicationTimer=null;}
 function watchPublication(d){
   stopPublicationCheck();
@@ -44,7 +66,7 @@ $('#loginForm').onsubmit=async e=>{e.preventDefault();$('#signIn').disabled=true
 $('#logout').onclick=()=>{if(!guard())return;stopPublicationCheck();auth='';current=null;dirty=false;$('#postTitle').value='';$('#postBody').value='';$('#previewPane').innerHTML='';$('#draftList').innerHTML='';$('#draftsButton').hidden=true;$('#logout').hidden=true;view('login');say('Signed out.');};
 $('#draftsButton').onclick=library;$('#newPost').onclick=()=>{if(guard()){showDraft({title:'',body:'',version:0,status:'draft'});$('#postTitle').focus();}};
 $('#postTitle').oninput=changed;$('#postBody').oninput=changed;$('#writeTab').onclick=writeMode;
-$('#previewTab').onclick=async()=>{try{const d=draftFromFields();if(!d.title.trim()){say('Give the post a title first.',true);return;}const r=await api('/preview',{method:'POST',body:JSON.stringify(d)});$('#previewPane').innerHTML='<h1>'+escape(d.title)+'</h1>'+r.html;$('#writePane').hidden=true;$('#previewPane').hidden=false;$('#writeTab').classList.remove('selected');$('#previewTab').classList.add('selected');$('#writeTab').setAttribute('aria-pressed','false');$('#previewTab').setAttribute('aria-pressed','true');say('');}catch(e){say(e.message,true);}};
+$('#previewTab').onclick=async()=>{try{const d=draftFromFields();if(!d.title.trim()){say('Give the post a title first.',true);return;}const r=await api('/preview',{method:'POST',body:JSON.stringify(d)});$('#previewPane').innerHTML='<h1>'+escape(d.title)+'</h1>'+r.html;attachPdfDownloads(r.documents);$('#writePane').hidden=true;$('#previewPane').hidden=false;$('#writeTab').classList.remove('selected');$('#previewTab').classList.add('selected');$('#writeTab').setAttribute('aria-pressed','false');$('#previewTab').setAttribute('aria-pressed','true');say('');}catch(e){say(e.message,true);}};
 async function saveDraft(){if(busy)return null;const d=draftFromFields();if(!d.title.trim()){say('Give the post a title first.',true);return null;}const slug=current.slug||slugify(d.title);if(!slug){say('Use a title containing letters or numbers.',true);return null;}lock(true);try{const saved=await api('/drafts/'+slug,{method:'PUT',body:JSON.stringify(d)});current=saved;dirty=false;$('#saveState').textContent='Saved just now';history.replaceState(null,'','?draft='+encodeURIComponent(slug));say('Draft saved.');return saved;}catch(e){say(e.message,true);return null;}finally{lock(false);}}
 $('#saveDraft').onclick=saveDraft;
 $('#publishPost').onclick=async()=>{if(dirty||!current.version){if(!await saveDraft())return;}$('#publishTitle').textContent=current.title;$('#publishDialog').showModal();};

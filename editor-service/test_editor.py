@@ -77,6 +77,24 @@ def test_table_cells_preserve_safe_markdown_and_escaped_pipes(client):
     assert 'Escaped | divider' in rendered
     assert '<script>' not in rendered and 'href="javascript:' not in rendered
 
+
+def test_pdf_download_is_private_and_serves_the_exact_document(client,tmp_path,monkeypatch):
+    documents=tmp_path/'documents';documents.mkdir()
+    monkeypatch.setattr(app,'DOCUMENTS',documents)
+    content=b'%PDF-1.7\nprivate cached source bytes\n%%EOF\n'
+    (documents/'spacex-q3-2026.pdf').write_bytes(content)
+    assert client.get('/api/documents/spacex-q3-2026').status_code==401
+    response=client.get('/api/documents/spacex-q3-2026',headers=headers())
+    assert response.status_code==200 and response.content==content
+    assert response.headers['content-type']=='application/pdf'
+    assert 'attachment;' in response.headers['content-disposition']
+    assert 'spacex-q3-2026.pdf' in response.headers['content-disposition']
+    assert response.headers['cache-control']=='private, no-store'
+    assert client.get('/api/documents/unknown',headers=headers()).status_code==404
+    assert client.get('/api/documents/asml-annual-report-2025',headers=headers()).status_code==404
+    response=client.post('/api/preview',headers=headers(),json={'title':'PDF','body':'A link','version':0}).json()
+    assert response['documents']=={app.SOURCE_PDFS['spacex-q3-2026']:'/documents/spacex-q3-2026'}
+
 def test_explicit_publish_and_private_later_edits(client,monkeypatch):
     draft(client)
     monkeypatch.setattr(app,'publish_to_github',lambda d:{'published_url':'https://joenewbry.com/blog/2026/09/08/test-post/','published_date':'2026-09-08','commit':'fixture'})

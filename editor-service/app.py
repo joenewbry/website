@@ -7,7 +7,7 @@ from zoneinfo import ZoneInfo
 from pathlib import Path
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
 from pydantic import BaseModel, Field
 from markdown_it import MarkdownIt
 
@@ -15,6 +15,13 @@ DATA=Path(os.environ.get('BLOG_DATA','/ssd/blog-editor/data'))
 CONFIG=Path(os.environ.get('BLOG_CONFIG','/etc/blog-editor/config.json'))
 REPO=Path(os.environ.get('BLOG_REPO','/ssd/blog-editor/website'))
 LOCK=threading.Lock()
+DOCUMENTS=Path(os.environ.get('BLOG_DOCUMENTS','/ssd/blog-editor/documents'))
+SOURCE_PDFS={
+    'spacex-q3-2026': 'https://ir.spacex.com/files/content_files/SpaceX-Reports-Third-Quarter-2026-Results.pdf',
+    'asml-annual-report-2025': 'https://ourbrand.asml.com/m/71076aaad607de4d/original/Exhibit%204.8.pdf',
+    'tsmc-management-q3-2026': 'https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf',
+    'tsmc-call-q3-2026': 'https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf',
+}
 RENDER=MarkdownIt('commonmark',{'html':False,'breaks':False}).enable('table')
 SLUG=re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 ORIGINS=['https://joenewbry.com','https://www.joenewbry.com']
@@ -124,7 +131,18 @@ def put_draft(slug:str,incoming:Draft):
 
 @app.post('/api/preview')
 def preview(incoming:Draft):
-    return {'html':RENDER.render(incoming.body)}
+    return {'html':RENDER.render(incoming.body),'documents':{
+        source:'/documents/'+key for key,source in SOURCE_PDFS.items()
+        if (DOCUMENTS/(key+'.pdf')).is_file()
+    }}
+
+
+@app.get('/api/documents/{key}')
+def download_document(key:str):
+    if key not in SOURCE_PDFS:raise HTTPException(404,'Source PDF not found.')
+    path=DOCUMENTS/(key+'.pdf')
+    if not path.is_file():raise HTTPException(404,'Source PDF not found.')
+    return FileResponse(path,media_type='application/pdf',filename=key+'.pdf',content_disposition_type='attachment')
 
 
 def git(*args):

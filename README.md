@@ -90,4 +90,11 @@ Local service tests: `pytest -q editor-service/test_editor.py`.
 The private preview supports Markdown pipe tables, including column alignment.
 Raw HTML remains disabled. Previewing never saves or publishes the draft.
 
+Verified source PDFs can be installed privately under `/ssd/blog-editor/documents/`.
+The preview adds an explicit Download PDF button beside recognized source links.
+The button fetches the file with the editor's owner credentials, validates PDF
+bytes, and starts a local download. Original source links are retained. Only the
+curated `SOURCE_PDFS` keys are served; this endpoint never fetches arbitrary URLs.
+All document responses require authentication and use `private, no-store` caching.
+
 Publication links remain hidden until the public page returns 200 with the exact published revision marker. The editor checks for up to five minutes, then offers Check publication. Revision query strings bypass cached 404 responses and old post versions. Older posts without a marker are checked for a successful article page. Tests cover a 404 during deployment, stale content during republishing, completion, and temporary network failure.
