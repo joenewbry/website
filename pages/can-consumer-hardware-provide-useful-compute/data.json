@@ -1,0 +1,385 @@
+{
+  "as_of": "2026-10-27",
+  "sources": {
+    "mac": {
+      "title": "llama.cpp M-series benchmarks",
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/4167"
+    },
+    "iphone": {
+      "title": "llama.cpp A-series benchmarks",
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/4508"
+    },
+    "android2": {
+      "title": "Galaxy S23 benchmark and backend comparison",
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/22791"
+    },
+    "android3": {
+      "title": "Qualcomm: Llama 2 7B demo, up to 20 tokens/s",
+      "url": "https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Unlocking-on-device-generative-AI-with-an-NPU-and-heterogeneous-computing.pdf"
+    },
+    "aihub": {
+      "title": "Qualcomm AI Hub: Qwen3-1.7B metrics",
+      "url": "https://aihub.qualcomm.com/mobile/models/qwen3_1_7b"
+    },
+    "liquid": {
+      "title": "Liquid AI: LFM2.5-1.2B-Thinking benchmarks",
+      "url": "https://www.liquid.ai/blog/lfm2-5-1-2b-thinking-on-device-reasoning-under-1gb"
+    },
+    "localscore": {
+      "title": "LocalScore: DeepSeek R1 0528 Qwen3 8B",
+      "url": "https://www.localscore.ai/model/1682"
+    },
+    "omlx": {
+      "title": "oMLX: Qwen3-1.7B on M2 Pro, 32 GB",
+      "url": "https://omlx.ai/benchmarks/performance/v1mz5mqa"
+    },
+    "m6": {
+      "title": "Apple: M6 MacBook Pro announcement, October 27, 2026",
+      "url": "https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/"
+    },
+    "iphone18": {
+      "title": "Apple: iPhone 18 Pro announcement",
+      "url": "https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/"
+    },
+    "gen6": {
+      "title": "Qualcomm: Snapdragon 8 Elite Gen 6 announcement",
+      "url": "https://www.qualcomm.com/news/releases/2026/09/snapdragon-leads-the-agentic-ai-age-with-two-of-the-world-s-fast"
+    },
+    "gptoss": {
+      "title": "OpenAI: gpt-oss-20b",
+      "url": "https://developers.openai.com/api/docs/models/gpt-oss-20b"
+    },
+    "ollamaoss": {
+      "title": "OpenAI: running gpt-oss locally with Ollama",
+      "url": "https://developers.openai.com/cookbook/articles/gpt-oss/run-locally-ollama"
+    },
+    "qwen35": {
+      "title": "Ollama: Qwen3.5 model downloads",
+      "url": "https://ollama.com/library/qwen3.5"
+    },
+    "pocketpal": {
+      "title": "PocketPal: open-source iOS and Android app",
+      "url": "https://github.com/a-ghorbani/pocketpal-ai"
+    },
+    "mlx": {
+      "title": "MLX LM: Apple Silicon inference and benchmarking",
+      "url": "https://github.com/ml-explore/mlx-lm"
+    }
+  },
+  "mac": {
+    "base": [
+      {
+        "label": "M2",
+        "rate": 21.91,
+        "detail": "10 GPU cores \u00b7 build 8e672ef",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M3",
+        "rate": 21.34,
+        "detail": "10 GPU cores \u00b7 build 8e672ef",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M4",
+        "rate": 24.11,
+        "detail": "10 GPU cores \u00b7 build 8e672ef",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M5",
+        "rate": 31.88,
+        "detail": "10 GPU cores \u00b7 16 GB Air \u00b7 build c1d0e7a",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M6",
+        "rate": null,
+        "detail": "Announced; no verified result in this dataset",
+        "source": "m6",
+        "kind": "No result"
+      }
+    ],
+    "pro": [
+      {
+        "label": "M2 Pro",
+        "rate": 37.87,
+        "detail": "16 GPU cores \u00b7 build 8e672ef \u00b7 your chip family",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M3 Pro",
+        "rate": 30.74,
+        "detail": "18 GPU cores \u00b7 build 8e672ef \u00b7 newer-Mac scenario",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M4 Pro",
+        "rate": 50.74,
+        "detail": "20 GPU cores \u00b7 build 8e672ef \u00b7 newer-Mac scenario",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M5 Pro",
+        "rate": 66.33,
+        "detail": "20 GPU cores \u00b7 64 GB \u00b7 August 31, 2026 submission",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M6 family",
+        "rate": null,
+        "detail": "No verified result; no M6 Pro specification assumed",
+        "source": "m6",
+        "kind": "No result"
+      }
+    ],
+    "max": [
+      {
+        "label": "M2 Max",
+        "rate": 65.95,
+        "detail": "38 GPU cores \u00b7 build 8e672ef",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M3 Max",
+        "rate": 66.31,
+        "detail": "40 GPU cores \u00b7 build 8e672ef",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M4 Max",
+        "rate": 83.06,
+        "detail": "40 GPU cores \u00b7 build 8e672ef",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M5 Max",
+        "rate": 119.92,
+        "detail": "40 GPU cores \u00b7 128 GB \u00b7 build c1d0e7a",
+        "source": "mac",
+        "kind": "Community benchmark"
+      },
+      {
+        "label": "M6 family",
+        "rate": null,
+        "detail": "No verified result; no M6 Max specification assumed",
+        "source": "m6",
+        "kind": "No result"
+      }
+    ]
+  },
+  "iphone": [
+    {
+      "label": "iPhone 14 generation",
+      "rate": 54.24,
+      "detail": "Tested: 14 Pro \u00b7 A16 \u00b7 TinyLlama 1.1B Q4_0",
+      "source": "iphone",
+      "kind": "Community benchmark"
+    },
+    {
+      "label": "iPhone 15 generation",
+      "rate": 56.86,
+      "detail": "Tested: 15 Pro \u00b7 A17 Pro \u00b7 TinyLlama 1.1B Q4_0",
+      "source": "iphone",
+      "kind": "Community benchmark"
+    },
+    {
+      "label": "iPhone 16 generation",
+      "rate": 69.77,
+      "detail": "Tested: 16 Pro \u00b7 A18 Pro \u00b7 TinyLlama 1.1B Q4_0",
+      "source": "iphone",
+      "kind": "Community benchmark"
+    },
+    {
+      "label": "iPhone 17 generation",
+      "rate": 87.33,
+      "detail": "Tested: iPhone Air \u00b7 A19 Pro, 5 GPU cores \u00b7 TinyLlama 1.1B Q4_0",
+      "source": "iphone",
+      "kind": "Community benchmark"
+    },
+    {
+      "label": "iPhone 18 generation",
+      "rate": null,
+      "detail": "No verified same-workload result in this dataset",
+      "source": "iphone18",
+      "kind": "No result"
+    }
+  ],
+  "android": [
+    {
+      "label": "Snapdragon 8 Gen 2",
+      "rate": 14.63,
+      "detail": "Galaxy S23 \u00b7 Qwen3.5 2B Q4_K_M \u00b7 llama.cpp CPU",
+      "source": "android2",
+      "kind": "Community benchmark"
+    },
+    {
+      "label": "Snapdragon 8 Gen 3",
+      "rate": 20,
+      "detail": "Llama 2 7B \u00b7 Qualcomm demo \u00b7 up to 20, not a typical rate",
+      "source": "android3",
+      "kind": "Vendor claim"
+    },
+    {
+      "label": "Snapdragon 8 Elite",
+      "rate": 40.21,
+      "detail": "Galaxy S25 \u00b7 Qwen3-1.7B w4a16 \u00b7 GenieX QAIRT \u00b7 512 context",
+      "source": "aihub",
+      "kind": "Vendor benchmark"
+    },
+    {
+      "label": "Snapdragon 8 Elite Gen 5",
+      "rate": 43.5,
+      "detail": "Galaxy S26 \u00b7 Qwen3-1.7B w4a16 \u00b7 GenieX QAIRT \u00b7 512 context",
+      "source": "aihub",
+      "kind": "Vendor benchmark"
+    },
+    {
+      "label": "Snapdragon 8 Elite Gen 6",
+      "rate": null,
+      "detail": "Announced; no verified result in this dataset",
+      "source": "gen6",
+      "kind": "No result"
+    }
+  ],
+  "reasoning": [
+    {
+      "label": "M2 Pro \u00b7 16 GB",
+      "rate": 23.1,
+      "detail": "DeepSeek-R1-0528-Qwen3-8B \u00b7 Q4_K_M \u00b7 LocalScore",
+      "source": "localscore",
+      "kind": "Community benchmark"
+    },
+    {
+      "label": "M2 Pro \u00b7 32 GB reference",
+      "rate": 96.3,
+      "detail": "Qwen3-1.7B \u00b7 4-bit \u00b7 oMLX \u00b7 4,096 context",
+      "source": "omlx",
+      "kind": "Community benchmark"
+    },
+    {
+      "label": "M4 Pro reference",
+      "rate": 96,
+      "detail": "LFM2.5-1.2B-Thinking \u00b7 INT8 \u00b7 Cactus CPU",
+      "source": "liquid",
+      "kind": "Vendor benchmark"
+    },
+    {
+      "label": "A19 Pro reference",
+      "rate": 64,
+      "detail": "LFM2.5-1.2B-Thinking \u00b7 INT8 \u00b7 Cactus CPU",
+      "source": "liquid",
+      "kind": "Vendor benchmark"
+    },
+    {
+      "label": "Snapdragon 8 Elite reference",
+      "rate": 82,
+      "detail": "ROG Phone 9 Pro \u00b7 LFM2.5-1.2B-Thinking \u00b7 Nexa neural processor",
+      "source": "liquid",
+      "kind": "Vendor benchmark"
+    }
+  ],
+  "models": [
+    {
+      "name": "LFM2.5-1.2B-Thinking",
+      "download": "~0.7\u20131.3 GB",
+      "phone": "Start here",
+      "mac16": "Easy fit",
+      "mac32": "Easy fit",
+      "note": "Compact reasoning for extraction and narrow tasks; the author cautions against knowledge-heavy work and programming. Custom Liquid license.",
+      "repo": "LiquidAI/LFM2.5-1.2B-Thinking"
+    },
+    {
+      "name": "Qwen3-1.7B",
+      "download": "~1\u20131.5 GB",
+      "phone": "Start here",
+      "mac16": "Easy fit",
+      "mac32": "Easy fit",
+      "note": "Switchable thinking mode. Use a 4-bit build and limit the reasoning budget. Apache 2.0.",
+      "repo": "Qwen/Qwen3-1.7B"
+    },
+    {
+      "name": "DeepSeek-R1-Distill-Qwen-1.5B",
+      "download": "~1\u20131.5 GB",
+      "phone": "Try it",
+      "mac16": "Easy fit",
+      "mac32": "Easy fit",
+      "note": "Older compact reasoning distill; useful for experiments, less capable than larger models. MIT.",
+      "repo": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+    },
+    {
+      "name": "Qwen3.5-2B",
+      "download": "~2\u20133 GB",
+      "phone": "Try it*",
+      "mac16": "Easy fit",
+      "mac32": "Easy fit",
+      "note": "Thinking is available but off by default. Requires a runtime with Qwen3.5 support. Apache 2.0.",
+      "repo": "Qwen/Qwen3.5-2B"
+    },
+    {
+      "name": "Qwen3-4B-Thinking-2507",
+      "download": "~2.5\u20133 GB",
+      "phone": "Conditional*",
+      "mac16": "Good starter",
+      "mac32": "Easy fit",
+      "note": "Dedicated reasoning model. Phone use needs short context and a compatible app. Apache 2.0.",
+      "repo": "Qwen/Qwen3-4B-Thinking-2507"
+    },
+    {
+      "name": "Qwen3.5-4B",
+      "download": "~3\u20134 GB",
+      "phone": "Conditional*",
+      "mac16": "Good starter",
+      "mac32": "Easy fit",
+      "note": "Thinking enabled by default. Start with a 4-bit build and 4K context. Apache 2.0.",
+      "repo": "Qwen/Qwen3.5-4B"
+    },
+    {
+      "name": "DeepSeek-R1-0528-Qwen3-8B",
+      "download": "~5\u20136 GB",
+      "phone": "Skip initially",
+      "mac16": "Good fit",
+      "mac32": "Easy fit",
+      "note": "Published M2 Pro 16 GB reference: 23.1 generated tokens/s. MIT.",
+      "repo": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B"
+    },
+    {
+      "name": "Qwen3.5-9B",
+      "download": "~6\u20138 GB",
+      "phone": "Skip initially",
+      "mac16": "With headroom",
+      "mac32": "Good fit",
+      "note": "Leave memory for macOS, apps and conversation cache. Apache 2.0.",
+      "repo": "Qwen/Qwen3.5-9B"
+    },
+    {
+      "name": "gpt-oss-20b",
+      "download": "~12\u201314 GB",
+      "phone": "Skip",
+      "mac16": "Tight / trial only",
+      "mac32": "Good candidate",
+      "note": "OpenAI reasoning model with low/medium/high effort. Use a supported quantized build; all experts still need storage. Apache 2.0.",
+      "repo": "openai/gpt-oss-20b"
+    },
+    {
+      "name": "Qwen3-30B-A3B-Thinking-2507",
+      "download": "~18\u201320 GB",
+      "phone": "Skip",
+      "mac16": "Skip",
+      "mac32": "Conditional*",
+      "note": "30B total parameters, about 3B active per token. Reserve memory for the full model plus cache. Apache 2.0.",
+      "repo": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+    }
+  ]
+}
