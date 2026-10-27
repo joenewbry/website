@@ -77,9 +77,15 @@ Download is approximate quantized file size, not working memory. Use short conte
 
 - [Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B): ~6–8 GB download. iPhone: Skip initially; 16 GB Mac: With headroom; 32 GB Mac: Good fit. Leave memory for macOS, apps and conversation cache. Apache 2.0.
 
+- [Underdog Saluki 27B 1.0](https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0): 7.90 GB download. iPhone: Skip; 16 GB Mac: Conditional*; 32 GB Mac: Candidate. IQ2-mix compression of Qwen3.8-27B, focused on preserving tool use. Local coding evaluation pending; weights alone are not total RAM. Apache 2.0.
+
 - [gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b): ~12–14 GB download. iPhone: Skip; 16 GB Mac: Tight / trial only; 32 GB Mac: Good candidate. OpenAI reasoning model with low/medium/high effort. Use a supported quantized build; all experts still need storage. Apache 2.0.
 
 - [Qwen3-30B-A3B-Thinking-2507](https://huggingface.co/Qwen/Qwen3-30B-A3B-Thinking-2507): ~18–20 GB download. iPhone: Skip; 16 GB Mac: Skip; 32 GB Mac: Conditional*. 30B total parameters, about 3B active per token. Reserve memory for the full model plus cache. Apache 2.0.
+
+## Saluki follow-up
+
+Saluki is an Apache 2.0 mixed-precision quantization of Qwen3.8-27B, approximately 7.90 GB. Publisher scores: tool selection 88/120 vs84/120; parallel calls42/100 vs35/100; 50-issue SWE-bench Verified subset30/50 vs33/50. These are not local results. The full model is verified on a download host; transfer and automatic local evaluation are pending. No local speed or pass rate exists yet. Recommend task-based offers with validation, cost per accepted task, explicit privacy boundaries and versioned models.
 
 ## Methodology
 
@@ -104,6 +110,7 @@ A harness should record model hash, runtime, quantization, input/output lengths,
 - [Apple: M6 MacBook Pro announcement, October 27, 2026](https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/)
 - [Apple: iPhone 18 Pro announcement](https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/)
 - [Qualcomm: Snapdragon 8 Elite Gen 6 announcement](https://www.qualcomm.com/news/releases/2026/09/snapdragon-leads-the-agentic-ai-age-with-two-of-the-world-s-fast)
+- [Conway Research: Saluki model card and benchmark limitations](https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0)
 - [OpenAI: gpt-oss-20b](https://developers.openai.com/api/docs/models/gpt-oss-20b)
 - [OpenAI: running gpt-oss locally with Ollama](https://developers.openai.com/cookbook/articles/gpt-oss/run-locally-ollama)
 - [Ollama: Qwen3.5 model downloads](https://ollama.com/library/qwen3.5)

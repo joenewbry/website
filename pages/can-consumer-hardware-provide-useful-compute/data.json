@@ -45,6 +45,10 @@
       "title": "Qualcomm: Snapdragon 8 Elite Gen 6 announcement",
       "url": "https://www.qualcomm.com/news/releases/2026/09/snapdragon-leads-the-agentic-ai-age-with-two-of-the-world-s-fast"
     },
+    "saluki": {
+      "title": "Conway Research: Saluki model card and benchmark limitations",
+      "url": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0"
+    },
     "gptoss": {
       "title": "OpenAI: gpt-oss-20b",
       "url": "https://developers.openai.com/api/docs/models/gpt-oss-20b"
@@ -362,6 +366,15 @@
       "mac32": "Good fit",
       "note": "Leave memory for macOS, apps and conversation cache. Apache 2.0.",
       "repo": "Qwen/Qwen3.5-9B"
+    },
+    {
+      "name": "Underdog Saluki 27B 1.0",
+      "download": "7.90 GB",
+      "phone": "Skip",
+      "mac16": "Conditional*",
+      "mac32": "Candidate",
+      "note": "IQ2-mix compression of Qwen3.8-27B, focused on preserving tool use. Local coding evaluation pending; weights alone are not total RAM. Apache 2.0.",
+      "repo": "ConwayResearch/Underdog-Saluki-27B-1.0"
     },
     {
       "name": "gpt-oss-20b",
