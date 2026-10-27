@@ -1,0 +1,33 @@
+## A home for your health records
+
+This guide shows you how to keep health records together in Google Drive. We will make two folders, one called Kristin Health Records and one called Paul Health Records. Then we will save a document, find it again, and optionally ask ChatGPT or Claude to explain it. These are illustrated examples, not a recording of anyone’s account. You can pause at any time.
+
+## 1. Make your two folders
+
+On your computer, open drive dot google dot com and sign in. Check the account picture in the upper right so you know whose account you are using. In My Drive, choose New, then New folder. Type Kristin Health Records and choose Create. Repeat for Paul Health Records. Start in My Drive, rather than inside a folder already shared with other people. If you prefer separate accounts, each person can create their own folder in their own account.
+
+## 2. Keep access restricted
+
+Right click each folder and choose Share. Under General access, keep Restricted selected. Review the people listed. Only invite someone by their email address if you want them to have access. Viewer lets them read; Editor also lets them add, change, and delete files. Sharing a folder gives access to the files inside it, so check both folders separately. Do not choose Anyone with the link for your health records.
+
+## 3. Save one record
+
+Download a record from your doctor’s patient portal onto your computer, preferably as a PDF. For paper records, use a readable scan or photograph with every page included. Back in Drive, open the correct person’s folder. Choose New, then File upload, and select the saved document. Wait for the upload to finish. Open the file and check the patient name, date, and all the pages. Keep the original document.
+
+## 4. Give it a useful name
+
+Use a name you will recognize later. For example: 2026 dash 10 dash 01, Clinic, Visit summary dot PDF. That is an invented example, not an actual visit. Right click the file and choose Rename. Use the date on the record, not today’s upload date. Later, search Drive for the clinic name or date, or just open the person’s folder. You can add subfolders later; two folders are enough to start.
+
+## 5. Optional: ask an AI assistant
+
+Google Drive remains your filing cabinet. ChatGPT or Claude is an optional helper. Before uploading health information, review that service’s privacy and training settings, and decide whether you are comfortable sharing the document. You can ask general questions without uploading anything. To use a file, download it from Drive, open a new chat, and use the attachment control to select it. In Claude, choose the plus button, then Add files or photos. Use a separate chat for each person. A Drive link alone may not give the assistant access, and this process does not automatically sync your folders.
+
+## 6. Ask for a plain-English explanation
+
+Try this prompt: Summarize only this document in plain English. Explain unfamiliar terms. Point to the page for each important fact. List questions I can ask my doctor. Say when something is missing or unreadable. Do not guess, diagnose, or recommend medication changes. Check every important detail against the original. An AI answer can be wrong. Use it to prepare for a conversation with your clinician, not to change treatment on your own.
+
+## Your first small win
+
+That is enough to get started. Make the two folders, check sharing, and upload one record. After each appointment, save the new document in the right folder. If you save an AI summary, label it AI draft, needs review, and keep it alongside the original. The written steps and a prompt you can copy are below the video. Go at your own pace.
+
+Source session: I'd like to explain to mom and dad how to use google drive to storea ll their ehealth records Krsitn Health recodrds and puals healt recrds two fodlers. Pleae make axplainer video of how to do this using ChatBPT or Claude. Essentially a gudie and draft an eemail with a link to the page. add it to joenewbry.com/pages/

@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.751
+This guide shows you how to keep health records together in Google Drive.
+
+00:00:04.751 --> 00:00:10.933
+We will make two folders, one called Kristin Health Records and one called Paul Health Records.
+
+00:00:10.933 --> 00:00:17.180
+Then we will save a document, find it again, and optionally ask ChatGPT or Claude to explain it.
+
+00:00:17.180 --> 00:00:21.605
+These are illustrated examples, not a recording of anyone’s account.
+
+00:00:21.605 --> 00:00:23.297
+You can pause at any time.
+
+00:00:24.497 --> 00:00:28.301
+On your computer, open drive dot google dot com and sign in.
+
+00:00:28.301 --> 00:00:33.690
+Check the account picture in the upper right so you know whose account you are using.
+
+00:00:33.690 --> 00:00:36.290
+In My Drive, choose New, then New folder.
+
+00:00:36.290 --> 00:00:39.206
+Type Kristin Health Records and choose Create.
+
+00:00:39.206 --> 00:00:41.172
+Repeat for Paul Health Records.
+
+00:00:41.172 --> 00:00:46.243
+Start in My Drive, rather than inside a folder already shared with other people.
+
+00:00:46.243 --> 00:00:52.203
+If you prefer separate accounts, each person can create their own folder in their own account.
+
+00:00:53.403 --> 00:00:56.097
+Right click each folder and choose Share.
+
+00:00:56.097 --> 00:00:59.185
+Under General access, keep Restricted selected.
+
+00:00:59.185 --> 00:01:00.827
+Review the people listed.
+
+00:01:00.827 --> 00:01:05.754
+Only invite someone by their email address if you want them to have access.
+
+00:01:05.754 --> 00:01:10.682
+Viewer lets them read; Editor also lets them add, change, and delete files.
+
+00:01:10.682 --> 00:01:16.397
+Sharing a folder gives access to the files inside it, so check both folders separately.
+
+00:01:16.397 --> 00:01:20.274
+Do not choose Anyone with the link for your health records.
+
+00:01:21.474 --> 00:01:27.689
+Download a record from your doctor’s patient portal onto your computer, preferably as a PDF.
+
+00:01:27.689 --> 00:01:32.958
+For paper records, use a readable scan or photograph with every page included.
+
+00:01:32.958 --> 00:01:36.201
+Back in Drive, open the correct person’s folder.
+
+00:01:36.201 --> 00:01:40.254
+Choose New, then File upload, and select the saved document.
+
+00:01:40.254 --> 00:01:42.281
+Wait for the upload to finish.
+
+00:01:42.281 --> 00:01:46.739
+Open the file and check the patient name, date, and all the pages.
+
+00:01:46.739 --> 00:01:48.563
+Keep the original document.
+
+00:01:49.763 --> 00:01:52.429
+Use a name you will recognize later.
+
+00:01:52.429 --> 00:01:57.241
+For example: 2026 dash 10 dash 01, Clinic, Visit summary dot PDF.
+
+00:01:57.241 --> 00:02:00.869
+That is an invented example, not an actual visit.
+
+00:02:00.869 --> 00:02:03.757
+Right click the file and choose Rename.
+
+00:02:03.757 --> 00:02:07.607
+Use the date on the record, not today’s upload date.
+
+00:02:07.607 --> 00:02:13.678
+Later, search Drive for the clinic name or date, or just open the person’s folder.
+
+00:02:13.678 --> 00:02:18.268
+You can add subfolders later; two folders are enough to start.
+
+00:02:19.468 --> 00:02:22.128
+Google Drive remains your filing cabinet.
+
+00:02:22.128 --> 00:02:24.722
+ChatGPT or Claude is an optional helper.
+
+00:02:24.722 --> 00:02:34.452
+Before uploading health information, review that service’s privacy and training settings, and decide whether you are comfortable sharing the document.
+
+00:02:34.452 --> 00:02:38.149
+You can ask general questions without uploading anything.
+
+00:02:38.149 --> 00:02:44.636
+To use a file, download it from Drive, open a new chat, and use the attachment control to select it.
+
+00:02:44.636 --> 00:02:48.527
+In Claude, choose the plus button, then Add files or photos.
+
+00:02:48.527 --> 00:02:50.863
+Use a separate chat for each person.
+
+00:02:50.863 --> 00:02:58.127
+A Drive link alone may not give the assistant access, and this process does not automatically sync your folders.
+
+00:02:59.327 --> 00:03:03.651
+Try this prompt: Summarize only this document in plain English.
+
+00:03:03.651 --> 00:03:05.367
+Explain unfamiliar terms.
+
+00:03:05.367 --> 00:03:08.250
+Point to the page for each important fact.
+
+00:03:08.250 --> 00:03:10.652
+List questions I can ask my doctor.
+
+00:03:10.652 --> 00:03:13.672
+Say when something is missing or unreadable.
+
+00:03:13.672 --> 00:03:17.516
+Do not guess, diagnose, or recommend medication changes.
+
+00:03:17.516 --> 00:03:20.948
+Check every important detail against the original.
+
+00:03:20.948 --> 00:03:22.733
+An AI answer can be wrong.
+
+00:03:22.733 --> 00:03:29.184
+Use it to prepare for a conversation with your clinician, not to change treatment on your own.
+
+00:03:30.384 --> 00:03:32.388
+That is enough to get started.
+
+00:03:32.388 --> 00:03:36.329
+Make the two folders, check sharing, and upload one record.
+
+00:03:36.329 --> 00:03:40.738
+After each appointment, save the new document in the right folder.
+
+00:03:40.738 --> 00:03:47.084
+If you save an AI summary, label it AI draft, needs review, and keep it alongside the original.
+
+00:03:47.084 --> 00:03:51.359
+The written steps and a prompt you can copy are below the video.
+
+00:03:51.359 --> 00:03:52.695
+Go at your own pace.
