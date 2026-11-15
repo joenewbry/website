@@ -1,0 +1,17 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://joenewbry.com/</loc></url>
+  <url><loc>https://joenewbry.com/blog/</loc></url>
+  <url><loc>https://joenewbry.com/pages/</loc></url>
+  <url><loc>https://joenewbry.com/pages/health-records/</loc></url>
+  <url><loc>https://joenewbry.com/pages/can-consumer-hardware-provide-useful-compute/</loc></url>
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ post.url | absolute_url }}</loc>
+    <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+  {% endfor %}
+</urlset>

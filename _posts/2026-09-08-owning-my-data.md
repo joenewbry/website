@@ -1,5 +1,6 @@
 ---
 title: "I don't want to pay for Google Drive storage"
+description: "Joe Newbry on keeping his own files instead of paying for more Google Drive storage."
 layout: post
 ---
 
