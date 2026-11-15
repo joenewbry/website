@@ -1,5 +1,6 @@
 ---
 title: "How fast can a HiWonder arm move?"
+description: "Joe Newbry measures how fast a HiWonder arm can move between chessboard squares."
 layout: post
 permalink: /blog/hiwonder-speed-limts/
 ---
