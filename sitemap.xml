@@ -6,6 +6,7 @@ layout: null
   <url><loc>https://joenewbry.com/</loc></url>
   <url><loc>https://joenewbry.com/blog/</loc></url>
   <url><loc>https://joenewbry.com/pages/</loc></url>
+  <url><loc>https://joenewbry.com/pages/oyster-dome-from-lake-samish/</loc></url>
   <url><loc>https://joenewbry.com/pages/health-records/</loc></url>
   <url><loc>https://joenewbry.com/pages/can-consumer-hardware-provide-useful-compute/</loc></url>
   {% for post in site.posts %}
