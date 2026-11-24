@@ -1,0 +1,27 @@
+*{box-sizing:border-box}
+html{font:17px/1.45 system-ui,sans-serif;color:#222}
+body{margin:0}
+main{max-width:44rem;margin:2rem auto;padding:0 1.2rem}
+h1{line-height:1.1}
+h2{font-size:1.18em}
+a{color:#23553e}
+li{margin:.4em 0}
+.checks{list-style:none;padding:0}
+.checks label{display:flex;align-items:baseline;gap:.6em}
+.checks input{flex:none}
+.tick{display:inline-block;border:1.3px solid;width:.75em;height:.75em;flex:none}
+section{break-after:page}
+section:last-child{break-after:auto}
+@page{size:letter;margin:.58in .7in}
+@media print{html{font:12pt/1.3 Arial,sans-serif}
+main{margin:0;padding:0;max-width:none}
+nav{display:none}
+h1{font-size:24pt;margin:0 0 .15in}
+h2{margin:.18in 0 .05in}
+.checks{columns:2;column-gap:.32in;margin:.08in 0}
+.checks li,ol li{break-inside:avoid}
+li{margin:0 0 .09in}
+ol{padding-left:1.5em}
+ol li{margin-bottom:.14in}
+}
+
