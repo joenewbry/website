@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oyster Dome from Lake Samish | Joe Newbry</title>
+<meta name="description" content="Four out-and-back runs from 873 W Lake Samish Drive to Oyster Dome and Samish Bay. Mapped distances, elevation, and a late-November plan.">
+<link rel="canonical" href="https://joenewbry.com/pages/oyster-dome-from-lake-samish/">
+<meta property="og:title" content="Oyster Dome from Lake Samish | Joe Newbry">
+<meta property="og:description" content="Four out-and-back runs from 873 W Lake Samish Drive to Oyster Dome and Samish Bay. Mapped distances, elevation, and a late-November plan.">
+<meta property="og:url" content="https://joenewbry.com/pages/oyster-dome-from-lake-samish/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://joenewbry.com/headshot.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oyster Dome from Lake Samish | Joe Newbry">
+<meta name="twitter:description" content="Four out-and-back runs from 873 W Lake Samish Drive to Oyster Dome and Samish Bay.">
+<meta name="twitter:image" content="https://joenewbry.com/headshot.png">
+<meta name="twitter:site" content="@joenewbry">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Joe Newbry","url":"https://joenewbry.com","jobTitle":"Founder","worksFor":{"@type":"Organization","name":"Metis Robotics"},"address":{"@type":"PostalAddress","addressLocality":"Menlo Park","addressRegion":"CA"},"image":"https://joenewbry.com/headshot.png","description":"Joe Newbry is building Metis Robotics, a robot that cleans teeth. Menlo Park, CA.","sameAs":["https://www.linkedin.com/in/joe-newbry/","https://x.com/joenewbry","https://github.com/joenewbry"]}</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#303438;font:20px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:850px;margin:auto;padding:36px 24px 70px}
+nav{font-size:17px;margin-bottom:40px}
+a{color:#245b76}
+h1{font-size:46px;line-height:1.15;font-weight:600;letter-spacing:-1px;margin:0 0 18px}
+h2{font-size:27px;line-height:1.3;margin:0 0 18px}
+h3{font-size:22px;line-height:1.3;margin:22px 0 10px}
+p{margin:0 0 18px}
+.intro{font-size:23px;color:#576168}
+.meta,small,footer{font-size:15px;color:#61696d}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 34px}
+.button,button{font:inherit;font-size:17px;border:1px solid #687b83;border-radius:6px;padding:10px 17px;background:#fff;color:#245b76;text-decoration:none;cursor:pointer}
+.primary{background:#245b76;color:#fff;border-color:#245b76}
+.step{border-top:1px solid #ddd;padding:32px 0}
+.num{font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#245b76;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0 20px}
+.stats div{background:#f5f6f6;border-radius:6px;padding:12px 14px}
+.stats strong{display:block;font-size:22px;line-height:1.25;color:#245b76}
+.stats span{display:block;font-size:14px;line-height:1.35;color:#576168;margin-top:4px}
+.table-scroll{overflow-x:auto;margin:8px 0 18px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:16px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid #ddd}
+th{font-weight:600}
+caption{text-align:left;font-size:15px;color:#576168;margin-bottom:8px}
+#map{height:480px;border:1px solid #ddd;border-radius:8px;margin:12px 0}
+.layers{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+.layers button[aria-pressed="true"]{background:#245b76;color:#fff;border-color:#245b76}
+svg.profile{width:100%;height:auto;display:block;margin:8px 0 6px}
+svg.profile text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+ol.turns{margin:8px 0 18px;padding-left:1.3em}
+ol.turns li{margin:8px 0}
+.note{font-size:16px;color:#576168}
+.callout{background:#faf9f5;padding:22px 24px;margin:20px 0;border-radius:6px}
+.sources{font-size:16px;border-top:1px solid #ddd;padding-top:28px}
+.sources li{margin:8px 0}
+footer{margin-top:30px}
+button:focus-visible,a:focus-visible{outline:3px solid #de9c37;outline-offset:4px}
+@media(max-width:600px){
+  body{font-size:18px}
+  main{padding:24px 18px}
+  h1{font-size:36px}
+  .intro{font-size:21px}
+  h2{font-size:24px}
+  #map{height:340px}
+}
+@media print{
+  nav,.actions,.layers,footer{display:none}
+  #map{height:320px}
+  .step{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="/">Joe Newbry</a> / <a href="/pages/">Guides</a></nav>
+<h1>Oyster Dome from the lake house</h1>
+<p class="intro">Four ways to run from 873 W Lake Samish Drive to Oyster Dome, including the full out-and-back down to Samish Bay.</p>
+<p class="meta">Blanchard State Forest, Chuckanut Mountains · Thanksgiving week 2026 · Checked November 23, 2026</p>
+
+<div class="callout">
+<p><strong>The 15-mile guess is the one-way trip, not the run.</strong> From the house, over Oyster Dome, to Chuckanut Drive at Samish Bay is <strong>13.4 miles</strong> on the mapped line. Out and back is <strong>26.8 miles</strong>, with about <strong>5,160 feet</strong> of climbing. Fifteen miles each way would be a 30-mile day. The real day is a few miles shorter than that, and it is not a 15-mile run.</p>
+<p class="note">If you swap in the guidebook’s 5.0-mile overlook hike wherever this page uses the mapped 4.0-mile out-and-back between the overlook and the dome, add about a mile each way. Plan on <strong>13 to 14 miles one way</strong> and <strong>27 to 29 miles</strong> round trip. The ranges are explained under the map.</p>
+</div>
+
+<div class="actions">
+<a class="button" href="#road">The road</a>
+<a class="button" href="#route-1">1 · Overlook</a>
+<a class="button" href="#route-2">2 · To the dome</a>
+<a class="button" href="#route-3">3 · To the bay</a>
+<a class="button" href="#route-4">4 · North Butte</a>
+<a class="button" href="#november">Late November</a>
+</div>
+
+<h2>The four runs, shortest first</h2>
+<div class="table-scroll" tabindex="0">
+<table>
+<caption>Moving times use 11 minutes per road mile and 17 minutes per trail mile. They are a pace assumption, not a recorded split. Add time for mud, photos, and the steep last pitch.</caption>
+<thead>
+<tr><th>Route</th><th>One way</th><th>Round trip</th><th>Climb, round trip</th><th>Road / trail, round trip</th><th>Moving time</th></tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">1. Drive to Samish Overlook, run the dome</th>
+<td>2.0 mi run</td>
+<td>4.0 mi mapped<br>5.0 mi in the guidebook</td>
+<td>about 1,290 ft on the map<br>1,050 ft in the guidebook</td>
+<td>The run is all trail. The drive is the same 8.2 mi road.</td>
+<td>about 1 hr 10 min to 1 hr 25 min</td>
+</tr>
+<tr>
+<th scope="row">2. House to Oyster Dome and back</th>
+<td>10.2 mi</td>
+<td>20.5 mi</td>
+<td>about 2,940 ft</td>
+<td>16.5 mi road, 4.0 mi trail</td>
+<td>about 4 hr 10 min</td>
+</tr>
+<tr>
+<th scope="row">3. House, over the dome, to Samish Bay, and back</th>
+<td>13.4 mi</td>
+<td>26.8 mi</td>
+<td>about 5,160 ft</td>
+<td>16.5 mi road, 10.3 mi trail</td>
+<td>about 6 hr</td>
+</tr>
+<tr>
+<th scope="row">4. Dome, Lily Lake, and North Butte</th>
+<td>The trail part is a loop, not a second destination.</td>
+<td>22.6 mi</td>
+<td>about 3,150 ft</td>
+<td>16.5 mi road, 6.2 mi trail</td>
+<td>about 4 hr 45 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>One way on route 2 gains about 2,350 feet. One way on route 3 gains about 2,500 feet and loses about 2,660, because you finish down at the bay. The return from the highway is the bigger climb. Route 4’s trail loop, by itself, gains about 1,500 feet and comes back to the overlook.</p>
+
+<h2>The line on the map</h2>
+<p>The trails are OpenStreetMap centerlines. The road is the public way around the south end of Lake Samish: West Lake Samish Drive, Lake Samish Road, Barrel Springs Road, then the gravel DNR roads to the overlook. Elevation under the lines is U.S. Geological Survey 3DEP, sampled about every 40 meters on the trails and every 55 meters on the road. Climbing is the sum of the uphill steps. A rise shorter than the sample spacing can be missed, and a small bump in the elevation model gets counted.</p>
+<div class="layers" role="group" aria-label="Routes to show on the map">
+<button type="button" data-layer="road" aria-pressed="true">Road</button>
+<button type="button" data-layer="r1" aria-pressed="true">To the dome</button>
+<button type="button" data-layer="down" aria-pressed="true">Down to the bay</button>
+<button type="button" data-layer="to_butte" aria-pressed="true">North Butte</button>
+<button type="button" data-layer="max_larry" aria-pressed="true">Max’s and Larry Reed</button>
+</div>
+<div id="map" role="region" aria-label="Map of the road and trails from Lake Samish to Oyster Dome and Chuckanut Drive"></div>
+<p class="note">Map tiles © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. The lines on the map are slightly simplified. <a href="routes.geojson" download>Download the full centerline</a> (GeoJSON) and open it in Gaia or another map app. It is a measured line, not an official track.</p>
+<p>Guidebook pages for the same trails: <a href="https://www.wta.org/go-hiking/hikes/oyster-dome">Washington Trails Association</a>, <a href="https://www.mountaineers.org/activities/routes-places/oyster-dome">The Mountaineers</a>, <a href="https://www.alltrails.com/trail/us/washington/oyster-dome-trail">AllTrails</a>, the <a href="https://www.dnr.wa.gov/sites/default/files/2025-05/amp_rec_blanchardmap.pdf">DNR Blanchard map</a> (May 2023), and the <a href="https://www.pnt.org/pnta/maps/">Pacific Northwest Trail Association maps</a>.</p>
+
+<h3>Why 4.0 miles and also 5.0</h3>
+<p>From the overlook sign to the rock, the mapped centerline is <strong>2.01 miles</strong> one way, <strong>4.0 miles</strong> out and back. <a href="https://www.wta.org/go-hiking/hikes/oyster-dome">WTA</a> and <a href="https://www.mountaineers.org/activities/routes-places/oyster-dome">The Mountaineers</a> both print <strong>5.0 miles round trip and 1,050 feet</strong> of gain for that hike. WTA’s own description is closer to the map than to the 5.0: about 0.4 mile down to the Samish Bay junction, the lily-lake fork around 1.9 miles, and the dome a quarter mile past that. The Mountaineers’ sentence for the same start is shorter still. I added the routes with the mapped lengths so the pieces fit together. Use 5.0 miles and 1,050 feet when you want the conservative guidebook number for the overlook hike alone.</p>
+<p>From Chuckanut Drive the same method gives <strong>3.15 miles</strong> one way and <strong>6.3 miles</strong> round trip. Published figures for that start are 6.3 miles and 1,900 feet (<a href="https://www.cascadiadaily.com/2025/oct/07/shelling-out-effort-at-oyster-dome/">Cascadia Daily News</a>), 6.5 miles and 1,900 feet (The Mountaineers), and 6.6 miles and 1,932 feet (<a href="https://www.alltrails.com/trail/us/washington/oyster-dome-trail">AllTrails</a>). The net rise on the elevation model, from 128 feet at the highway to 2,041 feet at the rock, is 1,913 feet. That sits in the same band as the published gain. The accumulated climb is higher once the small dips are included.</p>
+
+<section class="step" id="road">
+<p class="num">Shared approach</p>
+<h2>The road from the house</h2>
+<p>No designated trail leaves the west shore at the house. The public way is the road around the south end of the lake, then the DNR road the overlook signs already describe. It is <strong>8.2 miles</strong> one way: about <strong>4.4 miles</strong> on county roads and <strong>3.8 miles</strong> on gravel. The elevation model puts the address point at <strong>284 feet</strong> and the trail sign at <strong>1,267 feet</strong>. DNR lists the overlook at 1,300 feet. Along the way the road gains about <strong>1,320 feet</strong> and loses about <strong>330</strong>, so the out-and-back on the road alone is about 1,650 feet of climbing.</p>
+<p>West Lake Samish Drive and Lake Samish Road are tagged paved in OpenStreetMap. Barrel Springs Road has no surface tag. DNR’s driving directions treat the dirt as starting at the right turn into the forest. The forest roads are tagged gravel. WTA calls the road to the overlook rough. The yellow gate is on the last stretch.</p>
+<ol class="turns">
+<li>From the house, head southeast on <strong>West Lake Samish Drive</strong>. Stay on it for <strong>2.3 miles</strong> as it bends along the west shore and around toward the south end of the lake. OpenStreetMap still labels part of this as the Pacific Northwest Trail. The current PNT relation does not include this road, so treat that label as a name on the map, not as the signed national scenic trail.</li>
+<li>The road becomes <strong>Lake Samish Road</strong> and continues for <strong>1.5 miles</strong>, generally south-southeast, toward the Alger side of the lake.</li>
+<li>Turn right onto <strong>Barrel Springs Road</strong> and follow it <strong>0.7 miles</strong>. DNR spells it Barrel. OpenStreetMap spells it Barrell. Coming from I-5 this is a left turn. Coming from the house it is a right.</li>
+<li>At the Blanchard Forest sign, turn sharp right onto the gravel <strong>Blanchard Hill Trail Road</strong>. Stay on that dirt road for <strong>1.6 miles</strong>. OpenStreetMap splits the second mile off under the name “5 Mile Blanchard Hill Trail Road.” The bearing barely changes. It is the same road WTA measures as 1.7 miles to the overlook sign.</li>
+<li>Turn left onto <strong>DNR road B-2000</strong>, through the yellow gate, and continue <strong>2.1 miles</strong> to the Samish Overlook day-use area. WTA’s driving note says 2.2 miles past the gate. The trail leaves the northwest side of the overlook.</li>
+</ol>
+<p>That matches the agency directions, measured from the house instead of from I-5 exit 240. From the exit, WTA and DNR say: west on Lake Samish Road, left on Barrel Springs for 0.6 mile, right on the dirt road for 1.7 miles, left through the gate for 2.2 miles. Those three forest-side pieces sum to about 4.5 miles. From the house to that same Barrel Springs turn is the other 3.7.</p>
+</section>
+
+<section class="step" id="route-1">
+<p class="num">Route 1 · shortest</p>
+<h2>Drive to the overlook, run the dome</h2>
+<div class="stats">
+<div><strong>2.0 mi</strong><span>one way, mapped</span></div>
+<div><strong>4.0 mi</strong><span>round trip, mapped</span></div>
+<div><strong>5.0 mi</strong><span>round trip, WTA and the Mountaineers</span></div>
+<div><strong>1,050 ft</strong><span>guidebook gain for the round trip</span></div>
+<div><strong>1,290 ft</strong><span>mapped round-trip gain, 3DEP</span></div>
+<div><strong>~1¼ hr</strong><span>moving, at 17 min/mile</span></div>
+</div>
+<svg class="profile" viewBox="0 0 760 140" role="img" aria-label="Elevation profile from 1098 to 2041 feet">
+<polyline points="36.0,120.0 36.0,99.6 44.8,100.1 53.6,100.6 62.4,101.2 71.2,102.4 80.0,103.2 88.7,102.9 97.5,104.5 106.3,105.3 115.1,107.3 123.9,107.7 132.7,109.4 141.5,110.5 150.3,110.2 159.1,111.5 167.9,113.7 176.6,114.6 185.4,114.9 194.2,113.7 203.0,113.2 211.8,111.9 220.6,113.1 229.4,113.4 238.2,110.0 247.0,109.3 255.8,108.1 264.5,106.0 273.3,104.1 282.1,103.2 290.9,103.1 299.7,103.3 308.5,103.2 317.3,104.4 326.1,102.6 334.9,101.5 343.7,100.7 352.4,101.7 361.2,102.7 370.0,101.7 378.8,100.1 387.6,100.1 396.4,99.6 405.2,97.0 414.0,95.0 422.8,95.2 431.6,91.2 440.3,88.7 449.1,88.1 457.9,85.4 466.7,82.9 475.5,80.4 484.3,79.8 493.1,78.1 501.9,75.6 510.7,74.6 519.5,73.3 528.2,71.6 537.0,70.0 545.8,67.5 554.6,66.1 563.4,63.2 572.2,59.8 581.0,58.1 589.8,56.3 598.6,54.2 607.4,51.4 616.1,48.4 624.9,46.1 633.7,44.6 642.5,41.7 651.3,41.7 660.1,43.1 668.9,41.3 677.7,38.8 686.5,38.3 695.3,37.4 704.0,38.5 712.8,38.4 721.6,36.6 730.4,33.7 739.2,31.3 748.0,29.6 748.0,120.0" fill="#245b76" fill-opacity="0.13" stroke="none"></polyline>
+<polyline points="36.0,99.6 44.8,100.1 53.6,100.6 62.4,101.2 71.2,102.4 80.0,103.2 88.7,102.9 97.5,104.5 106.3,105.3 115.1,107.3 123.9,107.7 132.7,109.4 141.5,110.5 150.3,110.2 159.1,111.5 167.9,113.7 176.6,114.6 185.4,114.9 194.2,113.7 203.0,113.2 211.8,111.9 220.6,113.1 229.4,113.4 238.2,110.0 247.0,109.3 255.8,108.1 264.5,106.0 273.3,104.1 282.1,103.2 290.9,103.1 299.7,103.3 308.5,103.2 317.3,104.4 326.1,102.6 334.9,101.5 343.7,100.7 352.4,101.7 361.2,102.7 370.0,101.7 378.8,100.1 387.6,100.1 396.4,99.6 405.2,97.0 414.0,95.0 422.8,95.2 431.6,91.2 440.3,88.7 449.1,88.1 457.9,85.4 466.7,82.9 475.5,80.4 484.3,79.8 493.1,78.1 501.9,75.6 510.7,74.6 519.5,73.3 528.2,71.6 537.0,70.0 545.8,67.5 554.6,66.1 563.4,63.2 572.2,59.8 581.0,58.1 589.8,56.3 598.6,54.2 607.4,51.4 616.1,48.4 624.9,46.1 633.7,44.6 642.5,41.7 651.3,41.7 660.1,43.1 668.9,41.3 677.7,38.8 686.5,38.3 695.3,37.4 704.0,38.5 712.8,38.4 721.6,36.6 730.4,33.7 739.2,31.3 748.0,29.6" fill="none" stroke="#245b76" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<text x="8" y="18" font-size="13" fill="#576168">2,041 ft</text>
+<text x="8" y="134" font-size="13" fill="#576168">1,098 ft</text>
+</svg>
+<p class="note">Profile of the mapped line from the overlook sign to the rock. It drops first, then climbs. High sample 2,041 ft. Low sample 1,098 ft.</p>
+<p>Park at Samish Overlook and run the ordinary hike. The run is all trail. The drive is the 8.2-mile road above, and only the outbound drive matters if someone drops you. A Discover Pass has to be on the car. The gate closes one hour after sunset, which in Thanksgiving week is a little after 5 p.m. Be driving out before that.</p>
+<p>WTA’s walking directions, which match the forks on the map:</p>
+<ol class="turns">
+<li>Leave the northwest corner of the overlook on the trail, a piece of the Pacific Northwest Trail network. In <strong>0.39 mile</strong> you drop about 170 feet to the junction with the <strong>Samish Bay Connector</strong>. The 3DEP drop from 1,267 feet to 1,095 feet is 172 feet. WTA says 190. Turn right.</li>
+<li>Climb the Samish Bay Connector for <strong>1.34 miles</strong> to the fork. Left is Oyster Dome. The trail continuing ahead and right goes toward Lily and Lizard Lakes, Max’s Shortcut, and North Butte. WTA puts this fork at about 1.9 miles from the overlook and calls the dome a quarter mile farther.</li>
+<li>Take the <strong>Oyster Dome Trail</strong> <strong>0.29 mile</strong> to the rock. The trail gets faint near the top. The viewpoint node samples at <strong>2,041 feet</strong>. WTA’s high point is 2,025. The May 2023 DNR map labels the dome 2,021 feet.</li>
+<li>Return the same way. The opening descent becomes a short climb back to the car, which is why the round trip gains more than the one-way climb. One way is about 1,030 feet up and 260 down. Round trip is about 1,290 feet up.</li>
+</ol>
+<p>Going out, almost all of the 1,030 feet comes after the junction. The last quarter mile is the steep one, on rock that is slick when it is wet.</p>
+</section>
+
+<section class="step" id="route-2">
+<p class="num">Route 2</p>
+<h2>From the house to the dome and back</h2>
+<div class="stats">
+<div><strong>10.2 mi</strong><span>one way</span></div>
+<div><strong>20.5 mi</strong><span>round trip</span></div>
+<div><strong>2,350 ft</strong><span>gain, one way</span></div>
+<div><strong>2,940 ft</strong><span>gain, round trip</span></div>
+<div><strong>16.5 / 4.0</strong><span>road miles / trail miles, round trip</span></div>
+<div><strong>~4 hr 10 min</strong><span>moving time, round trip</span></div>
+</div>
+<svg class="profile" viewBox="0 0 760 140" role="img" aria-label="Elevation profile from 280 to 2041 feet">
+<polyline points="36.0,120.0 36.0,114.7 41.1,114.8 46.2,114.8 51.4,114.8 56.5,114.9 61.6,114.4 66.7,113.5 71.9,112.6 77.0,112.7 82.1,112.6 87.2,112.5 92.3,113.2 97.5,113.8 102.6,113.8 107.7,113.7 112.8,113.3 118.0,113.7 123.1,113.9 128.2,113.9 133.3,114.1 138.4,113.9 143.6,113.5 148.7,113.4 153.8,113.4 158.9,113.6 164.1,113.6 169.2,113.0 174.3,112.8 179.4,113.1 184.5,113.1 189.7,112.2 194.8,111.8 199.9,112.0 205.0,112.6 210.2,114.1 215.3,113.4 220.4,112.8 225.5,111.8 230.6,111.7 235.8,111.6 240.9,111.5 246.0,111.4 251.1,111.4 256.3,111.4 261.4,111.4 266.5,111.4 271.6,111.1 276.7,110.6 281.9,109.4 287.0,108.5 292.1,108.1 297.2,106.9 302.4,106.6 307.5,106.4 312.6,105.3 317.7,104.1 322.8,103.3 328.0,102.1 333.1,102.4 338.2,100.8 343.3,100.8 348.5,100.1 353.6,98.3 358.7,96.4 363.8,96.0 368.9,96.6 374.1,97.2 379.2,96.9 384.3,96.7 389.4,96.6 394.6,95.2 399.7,94.4 404.8,93.5 409.9,92.5 415.1,91.4 420.2,90.4 425.3,88.6 430.4,89.0 435.5,87.0 440.7,85.7 445.8,85.2 450.9,83.8 456.0,83.8 461.2,82.6 466.3,81.3 471.4,80.8 476.5,79.8 481.6,78.3 486.8,77.1 491.9,75.0 497.0,73.5 502.1,71.5 507.3,69.6 512.4,68.4 517.5,67.4 522.6,67.6 527.7,66.3 532.9,65.7 538.0,65.5 543.1,65.2 548.2,63.7 553.4,62.7 558.5,64.3 563.6,65.9 568.7,67.1 573.8,67.6 579.0,68.6 584.1,69.7 589.2,71.2 594.3,72.3 599.5,73.5 604.6,75.1 609.7,74.7 614.8,74.3 619.9,72.7 625.1,71.7 630.2,69.0 635.3,69.1 640.4,69.7 645.6,67.7 650.7,68.8 655.8,67.4 660.9,67.1 666.0,64.7 671.2,61.3 676.3,59.5 681.4,56.5 686.5,54.3 691.7,53.0 696.8,49.9 701.9,47.6 707.0,44.9 712.1,41.3 717.3,38.4 722.4,36.1 727.5,35.9 732.6,34.3 737.8,34.4 742.9,31.8 748.0,29.6 748.0,120.0" fill="#1f7a4d" fill-opacity="0.13" stroke="none"></polyline>
+<polyline points="36.0,114.7 41.1,114.8 46.2,114.8 51.4,114.8 56.5,114.9 61.6,114.4 66.7,113.5 71.9,112.6 77.0,112.7 82.1,112.6 87.2,112.5 92.3,113.2 97.5,113.8 102.6,113.8 107.7,113.7 112.8,113.3 118.0,113.7 123.1,113.9 128.2,113.9 133.3,114.1 138.4,113.9 143.6,113.5 148.7,113.4 153.8,113.4 158.9,113.6 164.1,113.6 169.2,113.0 174.3,112.8 179.4,113.1 184.5,113.1 189.7,112.2 194.8,111.8 199.9,112.0 205.0,112.6 210.2,114.1 215.3,113.4 220.4,112.8 225.5,111.8 230.6,111.7 235.8,111.6 240.9,111.5 246.0,111.4 251.1,111.4 256.3,111.4 261.4,111.4 266.5,111.4 271.6,111.1 276.7,110.6 281.9,109.4 287.0,108.5 292.1,108.1 297.2,106.9 302.4,106.6 307.5,106.4 312.6,105.3 317.7,104.1 322.8,103.3 328.0,102.1 333.1,102.4 338.2,100.8 343.3,100.8 348.5,100.1 353.6,98.3 358.7,96.4 363.8,96.0 368.9,96.6 374.1,97.2 379.2,96.9 384.3,96.7 389.4,96.6 394.6,95.2 399.7,94.4 404.8,93.5 409.9,92.5 415.1,91.4 420.2,90.4 425.3,88.6 430.4,89.0 435.5,87.0 440.7,85.7 445.8,85.2 450.9,83.8 456.0,83.8 461.2,82.6 466.3,81.3 471.4,80.8 476.5,79.8 481.6,78.3 486.8,77.1 491.9,75.0 497.0,73.5 502.1,71.5 507.3,69.6 512.4,68.4 517.5,67.4 522.6,67.6 527.7,66.3 532.9,65.7 538.0,65.5 543.1,65.2 548.2,63.7 553.4,62.7 558.5,64.3 563.6,65.9 568.7,67.1 573.8,67.6 579.0,68.6 584.1,69.7 589.2,71.2 594.3,72.3 599.5,73.5 604.6,75.1 609.7,74.7 614.8,74.3 619.9,72.7 625.1,71.7 630.2,69.0 635.3,69.1 640.4,69.7 645.6,67.7 650.7,68.8 655.8,67.4 660.9,67.1 666.0,64.7 671.2,61.3 676.3,59.5 681.4,56.5 686.5,54.3 691.7,53.0 696.8,49.9 701.9,47.6 707.0,44.9 712.1,41.3 717.3,38.4 722.4,36.1 727.5,35.9 732.6,34.3 737.8,34.4 742.9,31.8 748.0,29.6" fill="none" stroke="#1f7a4d" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<text x="8" y="18" font-size="13" fill="#576168">2,041 ft</text>
+<text x="8" y="134" font-size="13" fill="#576168">280 ft</text>
+</svg>
+<p class="note">House to the dome, one way. The long first rise is the road. The trail is the steeper finish. High sample 2,041 ft.</p>
+<p>Run the road in the section above, then the route 1 trail, then reverse both. Of the 8.2 road miles, 4.4 are county road and 3.8 are gravel. The trail adds 2.0 miles each way.</p>
+<p>At 11 minutes a mile on the road and 17 on the trail, one way is about 2 hours 5 minutes and the round trip is about 4 hours 10 minutes. Start by midmorning if you want to be down before the 4:19 p.m. sunset on November 26. You are on foot the whole time, so the vehicle gate does not lock you in. Bring a light anyway. The gravel is dark under the trees well before the clock says sunset.</p>
+<p>The forks are the same three as route 1. Coming back, the faint stretch is the top of the spur, then the Samish Bay Connector, then the 0.39-mile climb from the lower junction up to the overlook, then the road. Do not take the Chuckanut Trail downhill at that lower junction unless you mean to do route 3. That trail is the one that leaves toward the highway.</p>
+</section>
+
+<section class="step" id="route-3">
+<p class="num">Route 3 · the end to end</p>
+<h2>Over the dome and down to Samish Bay</h2>
+<div class="stats">
+<div><strong>13.4 mi</strong><span>one way, mapped</span></div>
+<div><strong>26.8 mi</strong><span>round trip, mapped</span></div>
+<div><strong>2,500 ft</strong><span>gain going out, about 2,660 down</span></div>
+<div><strong>5,160 ft</strong><span>gain, round trip</span></div>
+<div><strong>16.5 / 10.3</strong><span>road miles / trail miles, round trip</span></div>
+<div><strong>~6 hr</strong><span>moving time, round trip</span></div>
+</div>
+<svg class="profile" viewBox="0 0 760 140" role="img" aria-label="Elevation profile from 128 to 2041 feet">
+<polyline points="36.0,120.0 36.0,108.0 41.1,108.0 46.2,108.1 51.3,108.1 56.3,107.3 61.4,106.1 66.5,106.1 71.6,105.9 76.7,106.6 81.8,107.2 86.9,107.0 91.9,106.8 97.0,107.2 102.1,107.4 107.2,107.2 112.3,106.8 117.4,106.7 122.5,107.0 127.5,106.8 132.6,106.1 137.7,106.5 142.8,106.0 147.9,105.3 153.0,105.6 158.1,107.4 163.1,106.8 168.2,105.7 173.3,105.2 178.4,105.1 183.5,104.9 188.6,104.9 193.7,104.9 198.7,104.9 203.8,104.3 208.9,103.4 214.0,102.2 219.1,101.2 224.2,100.5 229.3,99.7 234.3,98.2 239.4,96.8 244.5,96.8 249.6,95.1 254.7,95.0 259.8,92.9 264.9,90.4 269.9,91.3 275.0,91.9 280.1,91.4 285.2,91.3 290.3,89.6 295.4,88.4 300.5,87.5 305.5,86.3 310.6,84.0 315.7,83.6 320.8,81.7 325.9,80.2 331.0,80.0 336.1,78.4 341.1,77.2 346.2,75.8 351.3,74.0 356.4,72.5 361.5,70.0 366.6,67.1 371.7,65.3 376.7,64.7 381.8,63.4 386.9,62.6 392.0,62.7 397.1,61.0 402.2,60.7 407.3,63.0 412.3,64.1 417.4,65.5 422.5,66.5 427.6,68.1 432.7,69.4 437.8,71.8 442.9,70.9 447.9,70.9 453.0,68.5 458.1,65.7 463.2,66.3 468.3,65.0 473.4,64.4 478.5,63.6 483.5,61.1 488.6,57.6 493.7,53.9 498.8,51.4 503.9,48.8 509.0,44.8 514.1,40.7 519.1,37.5 524.2,36.1 529.3,33.5 534.4,33.5 539.5,29.9 544.6,29.6 549.7,29.9 554.7,34.3 559.8,33.8 564.9,36.1 570.0,37.5 575.1,42.1 580.2,44.8 585.3,48.8 590.3,52.1 595.4,54.8 600.5,57.6 605.6,61.1 610.7,64.4 615.8,65.7 620.9,65.0 625.9,66.3 631.0,66.2 636.1,68.5 641.2,70.9 646.3,71.2 651.4,71.8 656.5,73.7 661.5,75.2 666.6,76.6 671.7,78.2 676.8,78.1 681.9,80.4 687.0,83.6 692.1,86.3 697.1,88.7 702.2,91.6 707.3,92.8 712.4,95.9 717.5,97.9 722.6,101.3 727.7,102.3 732.7,106.0 737.8,108.8 742.9,112.3 748.0,114.9 748.0,120.0" fill="#b8612a" fill-opacity="0.13" stroke="none"></polyline>
+<polyline points="36.0,108.0 41.1,108.0 46.2,108.1 51.3,108.1 56.3,107.3 61.4,106.1 66.5,106.1 71.6,105.9 76.7,106.6 81.8,107.2 86.9,107.0 91.9,106.8 97.0,107.2 102.1,107.4 107.2,107.2 112.3,106.8 117.4,106.7 122.5,107.0 127.5,106.8 132.6,106.1 137.7,106.5 142.8,106.0 147.9,105.3 153.0,105.6 158.1,107.4 163.1,106.8 168.2,105.7 173.3,105.2 178.4,105.1 183.5,104.9 188.6,104.9 193.7,104.9 198.7,104.9 203.8,104.3 208.9,103.4 214.0,102.2 219.1,101.2 224.2,100.5 229.3,99.7 234.3,98.2 239.4,96.8 244.5,96.8 249.6,95.1 254.7,95.0 259.8,92.9 264.9,90.4 269.9,91.3 275.0,91.9 280.1,91.4 285.2,91.3 290.3,89.6 295.4,88.4 300.5,87.5 305.5,86.3 310.6,84.0 315.7,83.6 320.8,81.7 325.9,80.2 331.0,80.0 336.1,78.4 341.1,77.2 346.2,75.8 351.3,74.0 356.4,72.5 361.5,70.0 366.6,67.1 371.7,65.3 376.7,64.7 381.8,63.4 386.9,62.6 392.0,62.7 397.1,61.0 402.2,60.7 407.3,63.0 412.3,64.1 417.4,65.5 422.5,66.5 427.6,68.1 432.7,69.4 437.8,71.8 442.9,70.9 447.9,70.9 453.0,68.5 458.1,65.7 463.2,66.3 468.3,65.0 473.4,64.4 478.5,63.6 483.5,61.1 488.6,57.6 493.7,53.9 498.8,51.4 503.9,48.8 509.0,44.8 514.1,40.7 519.1,37.5 524.2,36.1 529.3,33.5 534.4,33.5 539.5,29.9 544.6,29.6 549.7,29.9 554.7,34.3 559.8,33.8 564.9,36.1 570.0,37.5 575.1,42.1 580.2,44.8 585.3,48.8 590.3,52.1 595.4,54.8 600.5,57.6 605.6,61.1 610.7,64.4 615.8,65.7 620.9,65.0 625.9,66.3 631.0,66.2 636.1,68.5 641.2,70.9 646.3,71.2 651.4,71.8 656.5,73.7 661.5,75.2 666.6,76.6 671.7,78.2 676.8,78.1 681.9,80.4 687.0,83.6 692.1,86.3 697.1,88.7 702.2,91.6 707.3,92.8 712.4,95.9 717.5,97.9 722.6,101.3 727.7,102.3 732.7,106.0 737.8,108.8 742.9,112.3 748.0,114.9" fill="none" stroke="#b8612a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<text x="8" y="18" font-size="13" fill="#576168">2,041 ft</text>
+<text x="8" y="134" font-size="13" fill="#576168">128 ft</text>
+</svg>
+<p class="note">One way, house to Chuckanut Drive. The dome is the high point, then the line drops to the highway at 128 ft. The drawn trace reaches 2,041 ft.</p>
+<p>This is the run the 15-mile story was about. You do not stay on a single trail from the lake to the bay. You run the road to the overlook, climb to the dome, come back down the Samish Bay Connector to the same lower junction, and only then take the trail that descends to Chuckanut Drive. The dome is a spur. Getting from the overlook side to the bay side means climbing that spur and descending it.</p>
+<p>Mapped one way, in order:</p>
+<ol class="turns">
+<li><strong>8.2 miles</strong> on the road to the overlook. About 1,320 feet up.</li>
+<li><strong>0.39 mile</strong> down to the Samish Bay junction. Turn right, away from the highway.</li>
+<li><strong>1.62 miles</strong> up the Samish Bay Connector and the Oyster Dome spur to the rock. About 1,050 feet of climbing from the junction, with about 100 feet of dips in that.</li>
+<li>Turn around on the rock and descend that same <strong>1.62 miles</strong> to the lower junction. You are not back at the car. You are at the fork you passed on the way up.</li>
+<li>Take the <strong>Chuckanut Trail</strong> downhill, <strong>1.53 miles</strong>, to where it meets <strong>Chuckanut Drive, SR-11</strong>. The trail ends on the east side of the highway. The elevation model reads <strong>128 feet</strong> there. The Mountaineers list this trailhead at 200 feet. Almost all of this leg is downhill, about 1,000 feet, plus about 30 feet of small rises.</li>
+</ol>
+<p>Those trail pieces are 5.2 miles. With the road, one way is 13.4. Reverse the whole thing for home: up the Chuckanut Trail, up to the dome again, down to the overlook, then the road. That second climb, from the bay all the way back over the dome, is why the round trip is about 5,160 feet of gain rather than twice 2,500.</p>
+<p>The Mountaineers’ note for the highway start is the same junction from the other direction: 1.6 miles on the Pacific Northwest Trail, then left onto the Samish Bay Trail. Their 1.6 miles and this map’s 1.53 miles are the same leg. The bat caves are on this west-side trail, in the rocks that fell off the face of the dome. Enjoy them from the trail. The Mountaineers call the caves hazardous.</p>
+<p>Six hours of moving time, plus any stop on the rock, fills the daylight on November 26. Sunrise is 7:35 a.m. and sunset is 4:19 p.m. Start at first light, carry a headlamp, and decide in advance where you will turn around if the pace slips. The overlook and the dome are both clean turnarounds. Turning around at the dome, instead of dropping to the highway, is route 2.</p>
+</section>
+
+<section class="step" id="route-4">
+<p class="num">Route 4 · optional</p>
+<h2>Add Lily Lake and North Butte</h2>
+<div class="stats">
+<div><strong>6.2 mi</strong><span>trail loop, back at the overlook</span></div>
+<div><strong>22.6 mi</strong><span>round trip from the house</span></div>
+<div><strong>1,500 ft</strong><span>gain on the trail loop</span></div>
+<div><strong>3,150 ft</strong><span>gain for the whole round trip</span></div>
+<div><strong>16.5 / 6.2</strong><span>road miles / trail miles</span></div>
+<div><strong>~4 hr 45 min</strong><span>moving time from the house</span></div>
+</div>
+<svg class="profile" viewBox="0 0 760 140" role="img" aria-label="Elevation profile from 280 to 2216 feet">
+<polyline points="36.0,120.0 36.0,114.7 41.0,114.8 46.1,114.9 51.1,114.9 56.2,113.3 61.2,112.9 66.3,113.0 71.3,113.9 76.4,113.6 81.4,113.7 86.5,114.0 91.5,113.5 96.6,113.7 101.6,113.1 106.7,113.3 111.7,112.2 116.8,112.6 121.8,113.6 126.9,112.1 131.9,111.9 137.0,111.7 142.0,111.7 147.1,111.5 152.1,109.9 157.2,108.2 162.2,107.5 167.3,105.3 172.3,103.3 177.4,102.0 182.4,101.4 187.5,97.4 192.5,98.6 197.6,98.3 202.6,97.5 207.7,95.4 212.7,93.5 217.8,91.0 222.8,88.8 227.9,86.6 232.9,85.5 238.0,83.9 243.0,81.2 248.1,78.1 253.1,74.3 258.2,71.7 263.2,70.7 268.3,69.9 273.3,67.5 278.4,69.7 283.4,71.7 288.5,74.3 293.5,76.9 298.6,78.0 303.6,75.6 308.7,73.1 313.7,72.4 318.8,70.8 323.8,65.2 328.9,60.1 333.9,55.3 339.0,49.1 344.0,42.8 349.1,41.3 354.1,37.6 359.2,41.6 364.2,42.6 369.3,40.1 374.3,39.5 379.4,38.3 384.4,37.9 389.5,34.3 394.5,30.3 399.6,29.6 404.6,32.3 409.7,36.5 414.7,38.7 419.8,38.9 424.8,38.1 429.9,38.8 434.9,39.1 440.0,41.5 445.0,43.4 450.1,45.8 455.1,47.2 460.2,52.5 465.2,58.4 470.3,63.7 475.3,65.1 480.4,66.4 485.4,66.6 490.5,67.9 495.5,70.0 500.6,70.2 505.6,71.4 510.7,69.7 515.7,67.5 520.8,69.9 525.8,70.7 530.9,71.7 535.9,74.3 541.0,78.1 546.0,81.2 551.1,83.9 556.1,85.5 561.2,86.6 566.2,88.8 571.3,91.0 576.3,93.5 581.4,95.4 586.4,97.5 591.5,98.3 596.5,98.6 601.6,97.4 606.6,101.4 611.7,102.0 616.7,103.3 621.8,105.3 626.8,107.5 631.9,108.2 636.9,109.9 642.0,111.5 647.0,111.7 652.1,111.7 657.1,111.9 662.2,112.1 667.2,113.6 672.3,112.6 677.3,112.2 682.4,113.3 687.4,113.1 692.5,113.7 697.5,113.5 702.6,114.0 707.6,113.7 712.7,113.6 717.7,113.9 722.8,113.0 727.8,112.9 732.9,113.3 737.9,114.9 743.0,114.8 748.0,114.7 748.0,120.0" fill="#6b4c9a" fill-opacity="0.13" stroke="none"></polyline>
+<polyline points="36.0,114.7 41.0,114.8 46.1,114.9 51.1,114.9 56.2,113.3 61.2,112.9 66.3,113.0 71.3,113.9 76.4,113.6 81.4,113.7 86.5,114.0 91.5,113.5 96.6,113.7 101.6,113.1 106.7,113.3 111.7,112.2 116.8,112.6 121.8,113.6 126.9,112.1 131.9,111.9 137.0,111.7 142.0,111.7 147.1,111.5 152.1,109.9 157.2,108.2 162.2,107.5 167.3,105.3 172.3,103.3 177.4,102.0 182.4,101.4 187.5,97.4 192.5,98.6 197.6,98.3 202.6,97.5 207.7,95.4 212.7,93.5 217.8,91.0 222.8,88.8 227.9,86.6 232.9,85.5 238.0,83.9 243.0,81.2 248.1,78.1 253.1,74.3 258.2,71.7 263.2,70.7 268.3,69.9 273.3,67.5 278.4,69.7 283.4,71.7 288.5,74.3 293.5,76.9 298.6,78.0 303.6,75.6 308.7,73.1 313.7,72.4 318.8,70.8 323.8,65.2 328.9,60.1 333.9,55.3 339.0,49.1 344.0,42.8 349.1,41.3 354.1,37.6 359.2,41.6 364.2,42.6 369.3,40.1 374.3,39.5 379.4,38.3 384.4,37.9 389.5,34.3 394.5,30.3 399.6,29.6 404.6,32.3 409.7,36.5 414.7,38.7 419.8,38.9 424.8,38.1 429.9,38.8 434.9,39.1 440.0,41.5 445.0,43.4 450.1,45.8 455.1,47.2 460.2,52.5 465.2,58.4 470.3,63.7 475.3,65.1 480.4,66.4 485.4,66.6 490.5,67.9 495.5,70.0 500.6,70.2 505.6,71.4 510.7,69.7 515.7,67.5 520.8,69.9 525.8,70.7 530.9,71.7 535.9,74.3 541.0,78.1 546.0,81.2 551.1,83.9 556.1,85.5 561.2,86.6 566.2,88.8 571.3,91.0 576.3,93.5 581.4,95.4 586.4,97.5 591.5,98.3 596.5,98.6 601.6,97.4 606.6,101.4 611.7,102.0 616.7,103.3 621.8,105.3 626.8,107.5 631.9,108.2 636.9,109.9 642.0,111.5 647.0,111.7 652.1,111.7 657.1,111.9 662.2,112.1 667.2,113.6 672.3,112.6 677.3,112.2 682.4,113.3 687.4,113.1 692.5,113.7 697.5,113.5 702.6,114.0 707.6,113.7 712.7,113.6 717.7,113.9 722.8,113.0 727.8,112.9 732.9,113.3 737.9,114.9 743.0,114.8 748.0,114.7" fill="none" stroke="#6b4c9a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<text x="8" y="18" font-size="13" fill="#576168">2,216 ft</text>
+<text x="8" y="134" font-size="13" fill="#576168">280 ft</text>
+</svg>
+<p class="note">Out along the road, around the trail loop, not yet including the run home. The high sample on this trace is 2,216 ft. The North Butte pin itself reads 2,232 ft.</p>
+<p>Same road to the overlook. Instead of retracing the Samish Bay Connector all the way home, tag the dome, go out to North Butte by way of Lily Lake, and return on <strong>Max’s Shortcut</strong> and the <strong>Larry Reed Trail</strong>. The DNR map and WTA use Reed. It is often said Reid. The signs and the May 2023 map say Reed.</p>
+<ol class="turns">
+<li>Overlook to the Samish Bay junction, <strong>0.39 mile</strong>, and turn right.</li>
+<li>Samish Bay Connector to the Oyster Dome fork, <strong>1.34 miles</strong>. Go left to the rock, <strong>0.29 mile</strong>, and back down the spur.</li>
+<li>From the fork, continue toward Lily Lake and North Butte, <strong>0.90 mile</strong> to the butte. The Mountaineers call North Butte about a mile from this junction. The last <strong>0.19 mile</strong> is the North Butte Trail. WTA describes that overlook as a short, steep side trip of about 0.2 mile. Lily Lake is on this leg, at the campground trails. The 3DEP value at the mapped butte viewpoint is <strong>2,232 feet</strong>. WTA’s high point for North Butte is 2,178. The Mountaineers’ loop high point is 2,220.</li>
+<li>Backtrack about <strong>0.5 mile</strong> to the junction where <strong>Max’s Shortcut</strong> leaves.</li>
+<li>Max’s Shortcut, <strong>1.45 miles</strong>, down to the Larry Reed Trail. WTA calls this descent about a mile. The mapped centerline is longer.</li>
+<li>Larry Reed Trail, <strong>1.00 mile</strong>, back to the overlook. The DNR map labels this trail 0.9 mile. MTB Project lists it at 1.0 mile. Then the road home, 8.2 miles.</li>
+</ol>
+<p>The loop on its own is the 6.2 miles. It is not the same loop The Mountaineers publish. Their Oyster Dome–North Butte loop is <strong>10 miles, 2,500 feet of gain, high point 2,220 feet</strong>. They don’t spell the forks, so I did not stretch this line to hit 10 miles. Use their figure if you follow their route description on the mountain. Use 6.2 miles and about 1,500 feet for the forks listed above.</p>
+<p>WTA’s separate hikes, which start at the upper trailhead rather than at the house, are smaller again: North Butte 6.12 miles and 910 feet, the Lily and Lizard Lake loop 7.15 miles and 1,400 feet, and the Lily Lake loop that includes the dome 5.5 miles and 1,360 feet. Those are other walks in the same woods. They are not this road-plus-loop.</p>
+</section>
+
+<section class="step" id="november">
+<p class="num">Thanksgiving week</p>
+<h2>Late November, in daylight</h2>
+<p>On Thursday, November 26, 2026, sunrise in Bellingham is <strong>7:35 a.m.</strong> and sunset is <strong>4:19 p.m.</strong> Friday is 7:36 and 4:18. Saturday is 7:37 and 4:17. Civil twilight on the 26th ends at 4:54. Under the trees it is dim earlier than that. The numbers are from timeanddate, local Pacific time, with the end of daylight saving time on November 1 already included.</p>
+<h3>The gate and the pass</h3>
+<p>Samish Overlook is day use. DNR says it is open <strong>one hour before sunrise to one hour after sunset</strong>. On November 26 that is about <strong>6:35 a.m. to 5:19 p.m.</strong> WTA describes the same hours for the yellow gate. Vehicles longer than 25 feet are not allowed. There is parking for about 20 cars, a vault toilet, picnic tables, and benches.</p>
+<p>A <a href="https://discoverpass.wa.gov/about-pass/what-discover-pass">Discover Pass</a> is required to park there. The pass is a parking pass: $10 for a day, or $45 for a year, as listed by the Discover Pass program on November 23, 2026. The online store adds a processing fee to the annual pass. Route 1 needs the pass on the dashboard. Routes 2, 3, and 4 never leave a car on DNR land, so the pass is not what lets you run them. Do not drive up to stage a car inside the gate unless that car can leave before the gate closes.</p>
+<h3>Rain, mud, and water</h3>
+<p>November is a wet month at Bellingham International Airport. The 1991–2020 normals are a high of 51°F, a low of 38°F, <strong>5.20 inches</strong> of precipitation, and <strong>19.6 days</strong> with at least 0.01 inch. The airport is not the ridge. The dome is exposed, and it will be windier than the lake. WTA’s trail description says this slope gets substantial rain, and that turnpikes were built because of the mud. Roots and the rock at the top are slippery after a storm.</p>
+<p>The National Weather Service forecast issued the morning of November 23 had rain and showers for Bellingham through Thanksgiving Day, with a high in the mid-50s at the airport grid. That forecast will move. Check it the morning you run. The climate normal is the reason to expect mud even if a particular morning looks fine.</p>
+<p>Neither WTA nor DNR lists drinking water at the overlook. Carry what you will drink. The creeks on the climb and the water in Lily Lake are not treated water. Lily and Lizard Lakes have backcountry camps and no garbage service. Pack out what you bring.</p>
+<h3>The cliff and the highway</h3>
+<p>Oyster Dome is a cliff, not a rounded summit you can wander on. WTA’s warning is the right one: the drop is unforgiving, and children and dogs should not be near the edge. In late November the rock is wet. Step back from the lip to eat. Dogs are allowed on a leash on the WTA hike.</p>
+<p>The west end of route 3 meets <strong>SR-11, Chuckanut Drive</strong>, on the east shoulder. WTA and DNR both say the usual parking for that start is across the highway, and that you have to cross a state highway to reach the trail. AllTrails’ directions put the cars on the west shoulder and the trailhead on the east side. There is no crosswalk. The shoulder is narrow, and WTA notes that a car on or over the white line can be towed. For this run you can touch the trail sign and turn around without crossing. Don’t stand in the lane, and don’t count on drivers seeing you at dusk.</p>
+<p>Hang gliders and paragliders launch from the overlook when the wind suits them. Give the launch the space DNR marked for it.</p>
+</section>
+
+<section class="step" id="not-used">
+<p class="num">Looked at, not used</p>
+<h2>A shorter line on the map that I did not count</h2>
+<p>OpenStreetMap also shows a line of about <strong>5.5 miles</strong> from the house to the dome that leaves near the north end of the west shore, on Roy Road, then trails named Sweet’N’Low and Lost Sailor, then the British Army Trail. That would cut the road approach by more than half.</p>
+<p>I did not use it. It is not drawn on the May 2023 DNR Blanchard trail map. Sweet’N’Low is not one of the named trails on the Whatcom County Chuckanut Mountain Park map. A write-up of the British Army Trail says there is no official access into the Blanchard trails from the Lake Samish side. The British Army Trail itself is a real DNR trail, on the Blanchard map, once you are already in the forest. The question is the connection from the lake, and I could not confirm it as a public trail. If you already know that connector is open, it replaces most of the 8.2 miles of road. Until then, the counted routes stay on county roads and the trails DNR and WTA describe.</p>
+</section>
+
+<section class="sources">
+<h2>Sources and how the figures were made</h2>
+<p>Published distances and the gate, pass, and hazard notes come from the pages linked here. Distances that those pages do not give, including everything measured from the house, are from the map work below. I did not mix the two without saying which is which.</p>
+<ul>
+<li><a href="https://www.wta.org/go-hiking/hikes/oyster-dome">WTA, Oyster Dome</a>. 5.0 miles round trip, 1,050 feet, high point 2,025 feet, from Samish Overlook. The 0.4-mile descent of 190 feet, the fork at about 1.9 miles, the quarter-mile finish, the cliff warning, the highway crossing, the gate hours, the Discover Pass, and the request to start at the overlook rather than on Chuckanut Drive.</li>
+<li><a href="https://www.mountaineers.org/activities/routes-places/oyster-dome">The Mountaineers, Oyster Dome</a>. The same 5.0 miles and 1,050 feet from the overlook. 6.5 miles and 1,900 feet from the Chuckanut Drive trailhead, which they place at 200 feet. North Butte about a mile from the fork. Their longer loop: 10 miles, 2,500 feet, high point 2,220 feet. Bat caves described as hazardous. Max’s Shortcut noted as an add-on of about 2 miles on a different loop.</li>
+<li><a href="https://www.alltrails.com/trail/us/washington/oyster-dome-trail">AllTrails, Oyster Dome Trail</a>. 6.6 miles and 1,932 feet for the Chuckanut Drive start, with parking described on the west shoulder and the trailhead on the east side of SR-11.</li>
+<li><a href="https://www.cascadiadaily.com/2025/oct/07/shelling-out-effort-at-oyster-dome/">Cascadia Daily News, October 7, 2025</a>. 6.3 miles and 1,900 feet from Chuckanut Drive. 5 miles and 1,050 feet from the overlook.</li>
+<li><a href="https://dnr.wa.gov/forest-and-trust-lands/blanchard-whatcom-county-and-nearby-islands">Washington DNR, Blanchard State Forest</a>. Overlook elevation 1,300 feet. Day use, open one hour before sunrise until one hour after sunset. Vehicle length limit 25 feet. Discover Pass. Dogs on leash. No drinking water listed. <a href="https://www.dnr.wa.gov/sites/default/files/2025-05/amp_rec_blanchardmap.pdf">Trail map, May 2023</a>, including the Larry Reed Trail label of 0.9 mile and the Oyster Dome label of 2,021 feet.</li>
+<li><a href="https://wa100.dnr.wa.gov/north-cascades/oyster-dome">DNR WA100, Oyster Dome</a>. Discover Pass at the overlook, and the caution about crossing the highway if you start on Chuckanut Drive. The rockfall caves, and the note that the dome is about a mile above them.</li>
+<li><a href="https://www.wta.org/go-hiking/hikes/lily-lake-loop">WTA, Lily Lake Loop</a>. 5.5 miles and 1,360 feet from the overlook, including the dome, Max’s Shortcut, and the return on the Larry Reed Trail.</li>
+<li><a href="https://www.wta.org/go-hiking/hikes/north-butte">WTA, North Butte</a>. 6.12 miles and 910 feet from the upper trailhead. High point 2,178 feet.</li>
+<li><a href="https://www.wta.org/go-hiking/hikes/lily-lizard-lake-loop">WTA, Lily and Lizard Lake Loop</a>. 7.15 miles and 1,400 feet, and the 0.2-mile North Butte side trip.</li>
+<li><a href="https://www.mtbproject.com/trail/7032012/larry-reed-trail">MTB Project, Larry Reed Trail</a>. 1.0 mile, from the Max’s Shortcut junction up to the overlook.</li>
+<li><a href="https://www.pnt.org/pnta/know-before-you-go/north-cascades/">Pacific Northwest Trail Association, Section 7</a>, and the <a href="https://www.pnt.org/pnta/maps/">PNTA map page</a>. Oyster Dome and the British Army Trail are in this section. The strip maps are the navigation set. The congressional route through this patchwork of state forest and private land is not the same thing as every trail a local map names.</li>
+<li><a href="https://discoverpass.wa.gov/about-pass/what-discover-pass">Discover Pass</a>. $10 day, $45 annual, described there as a parking pass for DNR, State Parks, and WDFW land. Checked November 23, 2026.</li>
+<li><a href="https://www.timeanddate.com/sun/usa/bellingham?month=11&amp;year=2026">timeanddate, Bellingham sun for November 2026</a>. Sunrise and sunset used above.</li>
+<li><a href="https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals">NOAA 1991–2020 U.S. Climate Normals</a>, station USW00024217, Bellingham International Airport. November precipitation 5.20 inches, 19.6 days at or above 0.01 inch, normal high 51°F, normal low 38°F.</li>
+<li>National Weather Service, Seattle/Tacoma, point-forecast matrix for Bellingham, issued about 1:35 a.m. PST on November 23, 2026. Rain in the Thanksgiving forecast at the airport. Recheck before you go.</li>
+<li>OpenStreetMap ways retrieved November 23, 2026, including the Samish Bay Connector, the Oyster Dome Trail, the Chuckanut Trail, Max’s Shortcut, the Larry Reed Trail, the North Butte Trail, and the named roads. Lengths are haversine distances along those centerlines.</li>
+<li>U.S. Geological Survey 3DEP elevation, queried from the <a href="https://epqs.nationalmap.gov/">Elevation Point Query Service</a> at the sample points. House elevation is at the address point, not a surveyed porch.</li>
+<li>U.S. Census Bureau geocoder, Public Address Ranges, for 873 W Lake Samish Dr, Bellingham, WA 98229. The point is interpolated along the address range 809–933, on the left side of the TIGER line, about 7 meters from the OpenStreetMap centerline of West Lake Samish Drive. It is not a surveyed front door.</li>
+</ul>
+<p>The address point is 48.66949, −122.40523. The overlook trail sign used here is 48.60982, −122.42644. The dome viewpoint is 48.62693, −122.41482. North Butte is 48.62942, −122.40703. The trail meets Chuckanut Drive at 48.60866, −122.43333.</p>
+</section>
+
+<footer>
+<p>A guide for Joe Newbry’s Thanksgiving visit. Distances from the house are map measurements, not a GPS track of a run. Conditions and the forecast will change before you start.</p>
+</footer>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="routes.js"></script>
+<script>
+(function () {
+  var map = L.map("map", {scrollWheelZoom: false});
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 17,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var style = {
+    road: {color: "#5c6b73", weight: 4, dashArray: "7 8"},
+    r1: {color: "#245b76", weight: 5},
+    down: {color: "#b8612a", weight: 5},
+    to_butte: {color: "#6b4c9a", weight: 4},
+    max_larry: {color: "#1f7a4d", weight: 4}
+  };
+  var drawn = {};
+  Object.keys(style).forEach(function (key) {
+    drawn[key] = L.polyline(ROUTES[key], style[key]).addTo(map);
+  });
+  function pin(latlng, label) {
+    L.circleMarker(latlng, {
+      radius: 6, color: "#303438", weight: 2, fillColor: "#fff", fillOpacity: 1
+    }).addTo(map).bindTooltip(label, {permanent: false});
+  }
+  pin(ROUTES.road[0], "House");
+  pin(ROUTES.road[ROUTES.road.length - 1], "Samish Overlook");
+  pin(ROUTES.r1[ROUTES.r1.length - 1], "Oyster Dome");
+  pin(ROUTES.to_butte[ROUTES.to_butte.length - 1], "North Butte");
+  pin(ROUTES.down[ROUTES.down.length - 1], "Chuckanut Drive");
+  var all = [];
+  Object.keys(drawn).forEach(function (key) { all = all.concat(drawn[key].getLatLngs()); });
+  map.fitBounds(L.latLngBounds(all).pad(0.08));
+  document.querySelectorAll(".layers button").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var key = button.getAttribute("data-layer");
+      var on = button.getAttribute("aria-pressed") !== "true";
+      button.setAttribute("aria-pressed", on ? "true" : "false");
+      if (on) drawn[key].addTo(map);
+      else map.removeLayer(drawn[key]);
+    });
+  });
+})();
+</script>
+<noscript>
+<p>The map needs JavaScript. The distances above and the <a href="routes.geojson">GeoJSON file</a> still describe the lines. Trail pages: <a href="https://www.wta.org/go-hiking/hikes/oyster-dome">WTA</a>, <a href="https://www.mountaineers.org/activities/routes-places/oyster-dome">The Mountaineers</a>, <a href="https://www.alltrails.com/trail/us/washington/oyster-dome-trail">AllTrails</a>.</p>
+</noscript>
+</body>
+</html>
